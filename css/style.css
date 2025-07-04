@@ -1,0 +1,545 @@
+.flowUiMediumPaddingTop {
+	padding-top: 1rem;
+}
+
+.flowUiMediumPaddingBottom {
+	padding-bottom: 1rem;
+}
+
+.flowUiNoMarginBottom {
+	margin-bottom: 0;
+}
+
+#__component0---launchpad--idIconTabBar-content {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.newHomePageheaderbackground {
+	background: url(../images/homePageHeaderBannerUnAuth.jpg) center;
+	background-size: cover;
+	width: 100% !important;
+	max-height: 20rem;
+}
+
+.sapFGLI {
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sapMGT {
+	background-color: inherit;
+}
+
+.sapMGT:hover:not(.sapMGTPressActive):not(.sapMGTBackgroundImage) {
+	background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.sapTntToolPageMain {
+	background: linear-gradient(90deg,
+			#00a884 0%,
+			/* Teal/Green */
+			#ff6b6b 50%,
+			/* Orange/Peach */
+			#3f51b5 100%
+			/* Darker tone (blue-purple) */
+		) !important;
+	background: linear-gradient(150deg, #0080a891 0%, #ff6b6b87 50%, #3f7cb5d6 100%) !important;
+	overflow: hidden;
+}
+
+.celestia-gradient {
+	background:
+		/* Top left light purple/pink blob */
+		radial-gradient(circle at 10% 15%, #ffccff 0%, rgba(255, 204, 255, 0) 70%),
+		/* Top right blue/purple blob */
+		radial-gradient(circle at 90% 10%, #a8c0ff 0%, rgba(168, 192, 255, 0) 70%),
+		/* Center large purple blob */
+		radial-gradient(circle at 50% 50%, #9933cc 0%, rgba(153, 51, 204, 0) 60%),
+		/* Bottom left darker purple blob */
+		radial-gradient(circle at 20% 80%, #660099 0%, rgba(102, 0, 153, 0) 70%),
+		/* Bottom right pink/orange hint */
+		radial-gradient(circle at 80% 90%, #ff66cc 0%, rgba(255, 102, 204, 0) 70%),
+		/* Overall background transition - subtle base */
+		linear-gradient(135deg, #8a2be2 0%, #da70d6 50%, #ff8c00 100%);
+}
+
+indiglow-gradient {
+	background:
+		/* Top left light blue blob */
+		radial-gradient(circle at 10% 15%, #b3e0ff 0%, rgba(179, 224, 255, 0) 70%),
+		/* Top right darker blue blob */
+		radial-gradient(circle at 90% 10%, #80bfff 0%, rgba(128, 191, 255, 0) 70%),
+		/* Center large indigo blob */
+		radial-gradient(circle at 50% 50%, #4d94ff 0%, rgba(77, 148, 255, 0) 60%),
+		/* Bottom left darker indigo blob */
+		radial-gradient(circle at 20% 80%, #1a66ff 0%, rgba(26, 102, 255, 0) 70%),
+		/* Bottom right light purple hint */
+		radial-gradient(circle at 80% 90%, #cc99ff 0%, rgba(204, 153, 255, 0) 70%),
+		/* Overall background transition - subtle base */
+		linear-gradient(135deg, #4d94ff 0%, #b3e0ff 50%, #cc99ff 100%);
+}
+
+indiglow-gradient-1 {
+	background:
+		/* Top-right vibrant purple blob */
+		radial-gradient(circle at 80% 20%, #9933cc 0%, rgba(153, 51, 204, 0) 70%),
+		/* Mid-left darker indigo/purple wave */
+		radial-gradient(circle at 20% 60%, #6a0dad 0%, rgba(106, 13, 173, 0) 65%),
+		/* Bottom-left light blue blob */
+		radial-gradient(circle at 10% 90%, #87ceeb 0%, rgba(135, 206, 235, 0) 70%),
+		/* Overall light blue base */
+		linear-gradient(160deg, #6699ff 0%, #00bfff 100%);
+}
+
+.overviewPage .sapFDynamicPageHeaderWithContent {
+	padding: 0;
+}
+
+.newHomePageheaderbackground {
+	/* background: url('https://discovery-center.cloud.sap/images/homePageHeaderBannerUnAuth.jpg') center; */
+	background: url('/components/hr/img/triangunal.svg') center;
+	background-size: cover;
+	width: 100% !important;
+	max-height: 20rem;
+}
+
+.NewHomeBannerPadding {
+	padding: 6rem 0;
+	padding-top: 4rem;
+	padding-left: 1rem;
+	max-height: 18rem;
+}
+
+.events .sapFCard .sapFCardContent {
+	justify-content: center;
+}
+
+.overviewPage .sapFDynamicPageHeaderWithContent {
+	padding: 0;
+}
+
+.leave .sapUxAPObjectPageWrapperWillChangeScrollTop,
+.leave .sapUxAPObjectPageContainer,
+.leave .sapFDynamicPageHeader {
+	background: linear-gradient(-135deg,
+			rgba(0, 168, 132, 0.9) 0%,
+			/* Teal/Green */
+			rgba(255, 107, 107, 0.8) 30%,
+			/* Orange/Peach */
+			rgba(0, 168, 132, 0.7) 60%,
+			/* Teal/Green again */
+			rgba(255, 159, 67, 0.6) 80%,
+			/* Lighter Orange */
+			rgba(46, 46, 46, 0.9) 100%
+			/* Dark Grey */
+		);
+}
+
+/*
+ * Abstract Gradient CSS Styles inspired by the provided image.
+ *
+ * These gradients aim to capture the fluid, organic blend of teal/green, orange/peach,
+ * and darker tones.
+ *
+ * Note: Achieving the exact "grainy" or "noisy" texture seen in the reference image
+ * is difficult with pure CSS gradients. This often requires using SVG filters,
+ * background images, or overlaying noise textures.
+ */
+
+/* --- Gradient Style 1: Smooth Linear Gradient --- */
+/* A basic linear gradient transitioning between the main colors. */
+.gradient-style-1 {
+	background: linear-gradient(90deg,
+			#00a884 0%,
+			/* Teal/Green */
+			#ff6b6b 50%,
+			/* Orange/Peach */
+			#3f51b5 100%
+			/* Darker tone (blue-purple) */
+		);
+}
+
+/* --- Gradient Style 2: Diagonal Linear Gradient with More Colors --- */
+/* Using more color stops and a diagonal direction for a more dynamic look. */
+.gradient-style-2 {
+	background: linear-gradient(45deg,
+			#00a884 0%,
+			/* Teal/Green */
+			#1dd1a1 25%,
+			/* Lighter Green */
+			#ff9f43 50%,
+			/* Bright Orange */
+			#ee5253 75%,
+			/* Reddish-Orange */
+			#2e2e2e 100%
+			/* Dark Grey/Black */
+		);
+}
+
+/* --- Gradient Style 3: Radial Gradient (Circular/Elliptical Flow) --- */
+/* Radial gradient to simulate a central light source or a swirling effect. */
+.gradient-style-3 {
+	background: radial-gradient(circle at 70% 30%,
+			/* Position the center of the gradient */
+			#ff9f43 0%,
+			/* Bright Orange center */
+			#00a884 40%,
+			/* Teal/Green middle */
+			#2e2e2e 100%
+			/* Dark edge */
+		);
+}
+
+/* --- Gradient Style 4: More Complex Linear with Hard Stops (to hint at waves) --- */
+/* Using rgba with transparency and closer stops to get a layered, wavy feel. */
+.gradient-style-4 {
+	background: linear-gradient(-135deg,
+			rgba(0, 168, 132, 0.9) 0%,
+			/* Teal/Green */
+			rgba(255, 107, 107, 0.8) 30%,
+			/* Orange/Peach */
+			rgba(0, 168, 132, 0.7) 60%,
+			/* Teal/Green again */
+			rgba(255, 159, 67, 0.6) 80%,
+			/* Lighter Orange */
+			rgba(46, 46, 46, 0.9) 100%
+			/* Dark Grey */
+		);
+}
+
+/* --- Gradient Style 5: Using conic-gradient for a swirling effect --- */
+/* Conic gradients start from a point and sweep around. */
+.gradient-style-5 {
+	background: conic-gradient(from 180deg at 50% 50%,
+			#2e2e2e 0deg,
+			#00a884 90deg,
+			#ff6b6b 180deg,
+			#1dd1a1 270deg,
+			#2e2e2e 360deg);
+}
+
+/* --- Simulating Grain/Noise (Advanced, often requires filters or overlays) --- */
+/*
+ * Pure CSS gradients cannot directly create the 'grain' texture.
+ * This is typically done by:
+ * 1. Overlaying a semi-transparent PNG/SVG image of noise.
+ * 2. Using SVG filters (e.g., feTurbulence, feColorMatrix).
+ * 3. Applying CSS filter effects like blur combined with blend modes
+ * (though this is more for visual distortion than granular noise).
+ *
+ * Example (using a pseudo-element for overlaying noise):
+ */
+.gradient-with-noise {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	/* Example height */
+	background: linear-gradient(45deg,
+			#00a884 0%,
+			#ff9f43 50%,
+			#2e2e2e 100%);
+	overflow: hidden;
+	/* Important to contain the pseudo-element */
+}
+
+.gradient-with-noise::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* Using a base64 encoded noise image or linking to one */
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+	background-size: cover;
+	opacity: 0.1;
+	/* Adjust opacity for desired grain intensity */
+	pointer-events: none;
+	/* Allows clicks to pass through */
+}
+
+/* Another common method for noise: overlaying a black and white noise image. */
+.gradient-with-simple-noise {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	/* Example height */
+	background: linear-gradient(135deg,
+			#1dd1a1,
+			#ee5253);
+	/* You'd replace 'noise-texture.png' with your actual noise image */
+	/* background-image: url('path/to/noise-texture.png'); */
+	/* background-size: cover; */
+	/* background-blend-mode: overlay; */
+	/* Experiment with blend modes */
+}
+
+
+/* --- Example Usage in HTML --- */
+/* You would apply one of these classes to your div or body element */
+/*
+<div class="gradient-style-1" style="width: 2550px; height: 280px;"></div>
+<div class="gradient-with-noise" style="width: 2550px; height: 280px;"></div>
+*/
+
+/* Global App Background */
+.appBackground {
+	background-color: #1a1a1a;
+	/* Dark background from the image */
+}
+
+/* Page Title and Subtitle */
+.card-title-text {
+	font-size: 2.2rem;
+	/* Larger font size */
+	font-weight: 700;
+	/* Bold */
+	color: #ffffff;
+	/* White text */
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.sub-title-text {
+	font-size: 1rem;
+	color: #b0b0b0;
+	/* Lighter grey text */
+	text-align: center;
+	max-width: 600px;
+	/* Limit width for readability */
+	line-height: 1.5;
+}
+
+/* Segmented Button Styling (Adjusting UI5 defaults) */
+.sapMBtn.sapMBtnActive.sapMSegBBtn {
+	background-color: #333333 !important;
+	/* Darker grey for selected button */
+	color: #ffffff !important;
+	border-color: #333333 !important;
+}
+
+.sapMBtn.sapMSegBBtn {
+	background-color: #2a2a2a !important;
+	/* Default button background */
+	color: #b0b0b0 !important;
+	border-color: #2a2a2a !important;
+}
+
+/* Cards Container (for Flexbox behavior) */
+.cards-container {
+	width: 100%;
+	max-width: 1000px;
+	/* Max width to contain cards */
+	margin: 0 auto;
+	/* Center the container */
+}
+
+/* Individual Plan Card Styling */
+.plan-card {
+	background-color: rgba(42, 42, 42, 0.7);
+	/* Adjusted: Dark background with transparency */
+	backdrop-filter: blur(8px);
+	/* Added: Frosted glass effect */
+	-webkit-backdrop-filter: blur(8px);
+	/* Added: For Safari support */
+	border-radius: 1rem;
+	/* Rounded corners */
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+	/* Soft shadow */
+	overflow: hidden;
+	/* Important for border-radius on children */
+	color: #ffffff;
+	/* Default text color for card content */
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	/* Subtle border */
+	transition: transform 0.2s ease-in-out;
+}
+
+.plan-card:hover {
+	transform: translateY(-5px);
+	/* Slight lift on hover */
+}
+
+/* Card Header Styling */
+.plan-card-header {
+	background-color: rgba(51, 51, 51, 0.6);
+	/* Adjusted: Slightly lighter dark for header with transparency */
+	padding: 1.5rem 1rem;
+	/* Padding for header */
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	position: relative;
+	/* For the gradient background to work */
+	overflow: hidden;
+}
+
+.plan-title {
+	color: #ffffff;
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+/* Content Padding for all cards */
+.card-content-padding {
+	padding: 1rem 1.5rem;
+}
+
+.plan-description {
+	color: #b0b0b0;
+	font-size: 0.9rem;
+	min-height: 2.5rem;
+	/* Ensure consistent height for descriptions */
+}
+
+/* Price Section */
+.price-section {
+	margin-top: 1.5rem !important;
+	margin-bottom: 1rem !important;
+}
+
+.price-value {
+	font-size: 2.5rem;
+	/* Large price value */
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.price-unit {
+	font-size: 1rem;
+	color: #b0b0b0;
+	margin-left: 0.25rem;
+	padding-bottom: 0.3rem;
+	/* Align with price value baseline */
+}
+
+/* Upgrade Button */
+.upgrade-button {
+	background-color: #555555;
+	/* Default button color */
+	color: #ffffff;
+	font-weight: 600;
+	border-radius: 0.5rem;
+	height: 3rem;
+	/* Taller button */
+	width: 100%;
+	margin-top: 1rem;
+	text-transform: uppercase;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.upgrade-button:hover {
+	background-color: #666666;
+}
+
+/* Features/Limits Titles */
+.limits-features-title {
+	color: #ffffff;
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-top: 1.5rem !important;
+	margin-bottom: 0.8rem !important;
+}
+
+/* Feature List Items */
+.feature-list .sapMLIBC {
+	padding: 0.5rem 0;
+	/* Vertical spacing for list items */
+}
+
+.feature-icon {
+	color: #4CAF50;
+	/* Green checkmark */
+	margin-right: 0.5rem;
+}
+
+.feature-text {
+	color: #b0b0b0;
+	font-size: 0.9rem;
+}
+
+/* --- Highlight Card (Creator Plan) Specific Styling --- */
+.highlight-card .plan-card-header {
+	/* Apply a dynamic gradient using background-image */
+	background: linear-gradient(135deg, rgba(168, 0, 132, 0.8), rgba(132, 0, 168, 0.8), rgba(90, 0, 168, 0.8));
+	/* Adjusted: Example vibrant gradient with transparency */
+	border: none;
+	/* Remove default border for header if gradient */
+	position: relative;
+	z-index: 1;
+	/* Ensure badge is on top of gradient */
+	overflow: hidden;
+	/* Keep gradient contained */
+}
+
+/* Inner div/pseudo-element for the wavy abstract background in header */
+.highlight-header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23FFFFFF" fill-opacity="0.1" d="M0,50 C25,25 75,75 100,50 L100,100 L0,100 Z" /></svg>') repeat-x;
+	/* Very simple wavy pattern */
+	background-size: 200px 100%;
+	/* Adjust to stretch/repeat */
+	opacity: 0.15;
+	/* Make it subtle */
+	mix-blend-mode: overlay;
+	/* Blend with gradient */
+	z-index: 0;
+	/* Behind content */
+}
+
+
+.save-badge {
+	background-color: #ffc107;
+	/* Yellow badge background */
+	color: #2a2a2a;
+	/* Dark text for badge */
+	border-radius: 0.5rem;
+	padding: 0.3rem 0.6rem;
+	font-weight: 600;
+	font-size: 0.8rem;
+	min-width: 4rem;
+	/* Ensure badge has some width */
+}
+
+.save-text {
+	font-size: 0.7rem;
+	font-weight: 500;
+}
+
+.save-percent {
+	font-size: 0.9rem;
+	font-weight: 700;
+}
+
+
+.highlight-button {
+	background-color: #6200EE;
+	/* Purple for highlight button */
+	color: #ffffff;
+	/* Add gradient effect to button if desired, similar to header */
+	/* background: linear-gradient(45deg, #AA00FF, #6200EE); */
+}
+
+.highlight-button:hover {
+	background-color: #3700B3;
+}
+
+/* Book Demo Button (Enterprise) */
+.upgrade-button.book-demo-button {
+	background-color: #2196F3;
+	/* Blue for Book Demo */
+}
+
+.upgrade-button.book-demo-button:hover {
+	background-color: #1976D2;
+}
+
+.overviewPage .sapUxAPObjectPageSection .sapUxAPObjectPageSectionContainer .sapUxAPObjectPageSubSection .sapUxAPBlockContainer {
+	margin: 0;
+}

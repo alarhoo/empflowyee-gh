@@ -1,0 +1,260 @@
+{
+  "Clients": [
+    {
+      "ClId": "CL001",
+      "ClName": "Dunder Mifflin Inc.",
+      "ClDesc": "Premier provider of paper and office supplies.",
+      "ClLogo": "https://upload.wikimedia.org/wikipedia/en/3/3f/Dunder_Mifflin%2C_Inc_Logo.png",
+      "ClComments": "Classic client since 2001."
+    },
+    {
+      "ClId": "CL002",
+      "ClName": "Schrute Farms",
+      "ClDesc": "Organic beet farm and agritourism venture.",
+      "ClLogo": "",
+      "ClComments": "Family-owned since 1857."
+    }
+  ],
+  "Projects": [
+    {
+      "PrjId": "PRJ005",
+      "PrjName": "Office Olympics Platform",
+      "PrjDesc": "Gamifying office challenges and team-building.",
+      "PrjStart": "2025-04-30",
+      "PrjEnd": "2025-09-08",
+      "PrjBillableHrs": 409,
+      "PrjLeadOnshore": "Stanley Hudson",
+      "PrjLeadOffshore": "Dwight Schrute",
+      "PrjArchitect": "Toby Flenderson",
+      "PrjImg": "https://travel.thefuntimesguide.com/files/dunder-mifflin-sign-penn-paper-tower-scranton-601x426.jpg",
+      "PrjComments": "High priority"
+    },
+    {
+      "PrjId": "PRJ006",
+      "PrjName": "The Dundies Voting App",
+      "PrjDesc": "Web app to nominate and vote for Dundie awards.",
+      "PrjStart": "2025-04-15",
+      "PrjEnd": "2025-08-01",
+      "PrjBillableHrs": 289,
+      "PrjLeadOnshore": "Michael Scott",
+      "PrjLeadOffshore": "Darryl Philbin",
+      "PrjArchitect": "Dwight Schrute",
+      "PrjImg": "https://travel.thefuntimesguide.com/files/dunder-mifflin-sign-penn-paper-tower-scranton-601x426.jpg",
+      "PrjComments": "Urgent delivery"
+    },
+    {
+      "PrjId": "PRJ003",
+      "PrjName": "Sabre Printer Mobile App",
+      "PrjDesc": "A mobile companion for Sabre\u2019s printers.",
+      "PrjStart": "2025-03-12",
+      "PrjEnd": "2025-09-18",
+      "PrjBillableHrs": 301,
+      "PrjLeadOnshore": "Creed Bratton",
+      "PrjLeadOffshore": "Pam Beesly",
+      "PrjArchitect": "Pam Beesly",
+      "PrjImg": "https://travel.thefuntimesguide.com/files/dunder-mifflin-sign-penn-paper-tower-scranton-601x426.jpg",
+      "PrjComments": ""
+    },
+    {
+      "PrjId": "PRJ001",
+      "PrjName": "Dunder Website Revamp",
+      "PrjDesc": "Revamping the corporate website for Dunder Mifflin.",
+      "PrjStart": "2025-04-05",
+      "PrjEnd": "2025-08-28",
+      "PrjBillableHrs": 358,
+      "PrjLeadOnshore": "Stanley Hudson",
+      "PrjLeadOffshore": "Jim Halpert",
+      "PrjArchitect": "Michael Scott",
+      "PrjImg": "https://travel.thefuntimesguide.com/files/dunder-mifflin-sign-penn-paper-tower-scranton-601x426.jpg",
+      "PrjComments": "High priority"
+    },
+    {
+      "PrjId": "PRJ004",
+      "PrjName": "Michael Scott Paper Co. CRM",
+      "PrjDesc": "Lightweight CRM for small-scale clients.",
+      "PrjStart": "2025-03-06",
+      "PrjEnd": "2025-09-05",
+      "PrjBillableHrs": 515,
+      "PrjLeadOnshore": "Toby Flenderson",
+      "PrjLeadOffshore": "Phyllis Vance",
+      "PrjArchitect": "Michael Scott",
+      "PrjImg": "https://travel.thefuntimesguide.com/files/dunder-mifflin-sign-penn-paper-tower-scranton-601x426.jpg",
+      "PrjComments": "Includes client feedback"
+    },
+    {
+      "PrjId": "PRJ002",
+      "PrjName": "Schrute Farms E-Commerce",
+      "PrjDesc": "Setting up online sales for beets and farm stays.",
+      "PrjStart": "2025-04-13",
+      "PrjEnd": "2025-08-20",
+      "PrjBillableHrs": 511,
+      "PrjLeadOnshore": "Angela Martin",
+      "PrjLeadOffshore": "Kelly Kapoor",
+      "PrjArchitect": "Stanley Hudson",
+      "PrjImg": "https://travel.thefuntimesguide.com/files/dunder-mifflin-sign-penn-paper-tower-scranton-601x426.jpg",
+      "PrjComments": ""
+    }
+  ],
+  "EmployeeProjects": [
+    {
+      "EmpPrjPk": "EMPPRJ001",
+      "EmpPrjHrs": 136,
+      "EmpPrjStart": "2025-03-12",
+      "EmpPrjEnd": "2025-09-02",
+      "ProjectId": "PRJ005",
+      "Employee": "Phyllis Vance"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ002",
+      "EmpPrjHrs": 111,
+      "EmpPrjStart": "2025-02-05",
+      "EmpPrjEnd": "2025-09-14",
+      "ProjectId": "PRJ006",
+      "Employee": "Oscar Martinez"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ003",
+      "EmpPrjHrs": 70,
+      "EmpPrjStart": "2025-03-17",
+      "EmpPrjEnd": "2025-10-20",
+      "ProjectId": "PRJ003",
+      "Employee": "Oscar Martinez"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ004",
+      "EmpPrjHrs": 191,
+      "EmpPrjStart": "2025-02-15",
+      "EmpPrjEnd": "2025-08-25",
+      "ProjectId": "PRJ003",
+      "Employee": "Angela Martin"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ005",
+      "EmpPrjHrs": 106,
+      "EmpPrjStart": "2025-02-08",
+      "EmpPrjEnd": "2025-09-16",
+      "ProjectId": "PRJ006",
+      "Employee": "Michael Scott"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ006",
+      "EmpPrjHrs": 66,
+      "EmpPrjStart": "2025-02-10",
+      "EmpPrjEnd": "2025-08-24",
+      "ProjectId": "PRJ001",
+      "Employee": "Kelly Kapoor"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ007",
+      "EmpPrjHrs": 154,
+      "EmpPrjStart": "2025-02-06",
+      "EmpPrjEnd": "2025-10-14",
+      "ProjectId": "PRJ004",
+      "Employee": "Kelly Kapoor"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ008",
+      "EmpPrjHrs": 147,
+      "EmpPrjStart": "2025-03-02",
+      "EmpPrjEnd": "2025-09-12",
+      "ProjectId": "PRJ004",
+      "Employee": "Darryl Philbin"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ009",
+      "EmpPrjHrs": 181,
+      "EmpPrjStart": "2025-02-19",
+      "EmpPrjEnd": "2025-08-11",
+      "ProjectId": "PRJ006",
+      "Employee": "Pam Beesly"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ010",
+      "EmpPrjHrs": 179,
+      "EmpPrjStart": "2025-03-01",
+      "EmpPrjEnd": "2025-09-28",
+      "ProjectId": "PRJ002",
+      "Employee": "Stanley Hudson"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ011",
+      "EmpPrjHrs": 161,
+      "EmpPrjStart": "2025-03-15",
+      "EmpPrjEnd": "2025-09-02",
+      "ProjectId": "PRJ001",
+      "Employee": "Ryan Howard"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ012",
+      "EmpPrjHrs": 151,
+      "EmpPrjStart": "2025-02-27",
+      "EmpPrjEnd": "2025-09-16",
+      "ProjectId": "PRJ005",
+      "Employee": "Stanley Hudson"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ013",
+      "EmpPrjHrs": 142,
+      "EmpPrjStart": "2025-03-01",
+      "EmpPrjEnd": "2025-09-20",
+      "ProjectId": "PRJ005",
+      "Employee": "Jim Halpert"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ014",
+      "EmpPrjHrs": 178,
+      "EmpPrjStart": "2025-02-04",
+      "EmpPrjEnd": "2025-09-03",
+      "ProjectId": "PRJ005",
+      "Employee": "Ryan Howard"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ015",
+      "EmpPrjHrs": 135,
+      "EmpPrjStart": "2025-02-12",
+      "EmpPrjEnd": "2025-10-15",
+      "ProjectId": "PRJ003",
+      "Employee": "Ryan Howard"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ016",
+      "EmpPrjHrs": 199,
+      "EmpPrjStart": "2025-02-09",
+      "EmpPrjEnd": "2025-09-26",
+      "ProjectId": "PRJ005",
+      "Employee": "Angela Martin"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ017",
+      "EmpPrjHrs": 92,
+      "EmpPrjStart": "2025-02-09",
+      "EmpPrjEnd": "2025-10-08",
+      "ProjectId": "PRJ002",
+      "Employee": "Darryl Philbin"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ018",
+      "EmpPrjHrs": 62,
+      "EmpPrjStart": "2025-03-19",
+      "EmpPrjEnd": "2025-08-25",
+      "ProjectId": "PRJ002",
+      "Employee": "Oscar Martinez"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ019",
+      "EmpPrjHrs": 133,
+      "EmpPrjStart": "2025-02-24",
+      "EmpPrjEnd": "2025-09-24",
+      "ProjectId": "PRJ003",
+      "Employee": "Pam Beesly"
+    },
+    {
+      "EmpPrjPk": "EMPPRJ020",
+      "EmpPrjHrs": 154,
+      "EmpPrjStart": "2025-03-10",
+      "EmpPrjEnd": "2025-09-08",
+      "ProjectId": "PRJ003",
+      "Employee": "Meredith Palmer"
+    }
+  ]
+}

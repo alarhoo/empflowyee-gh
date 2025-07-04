@@ -1,0 +1,74 @@
+{
+  "TimeSheets": [
+    {
+      "status": "Pending Approval",
+      "id": "NRGITS00369972",
+      "revision": "0",
+      "mainDoc": "NRGIJP0031",
+      "supervisor": "Sellers, Amanda",
+      "startDate": "06/23/2025",
+      "endDate": "06/29/2025",
+      "st": "40.00",
+      "ot": "0.00",
+      "dt": "0.00",
+      "others": "0.00",
+      "nb": "0.00"
+    },
+    {
+      "status": "Pending Approval",
+      "id": "NRGITS00369971",
+      "revision": "0",
+      "mainDoc": "NRGIJP0031",
+      "supervisor": "Sellers, Amanda",
+      "startDate": "06/16/2025",
+      "endDate": "06/22/2025",
+      "st": "40.00",
+      "ot": "0.00",
+      "dt": "0.00",
+      "others": "0.00",
+      "nb": "0.00"
+    },
+    {
+      "status": "Approved",
+      "id": "NRGITS00369970",
+      "revision": "0",
+      "mainDoc": "NRGIJP0031",
+      "supervisor": "Sellers, Amanda",
+      "startDate": "06/09/2025",
+      "endDate": "06/15/2025",
+      "st": "40.00",
+      "ot": "0.00",
+      "dt": "0.00",
+      "others": "0.00",
+      "nb": "0.00"
+    },
+    {
+      "status": "Approved",
+      "id": "NRGITS00369969",
+      "revision": "0",
+      "mainDoc": "NRGIJP0031",
+      "supervisor": "Sellers, Amanda",
+      "startDate": "06/02/2025",
+      "endDate": "06/08/2025",
+      "st": "40.00",
+      "ot": "0.00",
+      "dt": "0.00",
+      "others": "0.00",
+      "nb": "0.00"
+    },
+    {
+      "status": "Approved",
+      "id": "NRGITS00369968",
+      "revision": "0",
+      "mainDoc": "NRGIJP0031",
+      "supervisor": "Sellers, Amanda",
+      "startDate": "05/26/2025",
+      "endDate": "06/01/2025",
+      "st": "40.00",
+      "ot": "0.00",
+      "dt": "0.00",
+      "others": "0.00",
+      "nb": "0.00"
+    }
+  ]
+}

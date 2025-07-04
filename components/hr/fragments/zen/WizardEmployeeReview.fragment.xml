@@ -1,0 +1,120 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form">
+	<form:SimpleForm
+		editable="true"
+		layout="ColumnLayout">
+		<form:content>
+			<!-- Personal Information -->
+			<core:Title text="Personal Information" />
+			<Label text="Full Name (First Middle Last)" />
+			<Text text="{register>/EmpMainFirst} {register>/EmpMainMiddle} {register>/EmpMainLast}" />
+			<Label text="Personal Email" />
+			<Text text="{register>/EmpMail}" />
+			<Label text="Date of Birth" />
+			<Text text="{register>/EmpMainDob}" />
+			<Label text="Gender" />
+			<Text text="{register>/EmpMainGender}" />
+			<Text text="{= ${empDetail>/EmpMainGender} === '1' ? 'Male' : (${empDetail>/EmpMainGender} === '0' ? 'Female' : 'Other') }" />
+			<Label text="Blood Group" />
+			<Text text="{register>/empBloodGroup}" />
+			<!-- Employment Details -->
+			<core:Title text="Employment Details" />
+			<Label text="Employee ID" />
+			<Text text="{register>/EmpMainId}" />
+			<Label text="Organizational Email" />
+			<Text text="{register>/EmpMainOrgMail}" />
+			<Label text="Date of Joining" />
+			<Text text="{register>/EmpMainDoj}" />
+			<Label text="Employee Billable" />
+			<Text text="{= ${register>/EmpMainBillable} ? 'Yes' : 'No' }" />
+			<Label text="Employment on Contract" />
+			<Text text="{= ${register>/EmpMainContract} ? 'Yes' : 'No' }" />
+			<Label text="Profile Type" />
+			<Text text="{register>/empProfileType}" />
+			<Label text="Designation" />
+			<Text text="{register>/EmpMainDesignation}" />
+			<Label text="Process Lead" />
+			<Text text="{register>/EmpMainLead}" />
+			<Label text="Employee Workspace" />
+			<Text text="{register>/EmpMainWorkspace}" />
+			<!-- Contact Information -->
+			<core:Title text="Contact Information" />
+			<Label text="Primary Contact Number" />
+			<Text text="{register>/EmpInfoPriContact}" />
+			<Label text="Secondary Contact Number" />
+			<Text text="{register>/EmpInfoSecContact}" />
+			<Label text="Emergency Contact Number" />
+			<Text text="{register>/EmpInfoEmgContact}" />
+			<Label text="Emergency Contact Name" />
+			<Text text="{register>/EmpInfoEmgName}" />
+			<Label text="Relation to Contact" />
+			<Text text="{register>/EmpInfoEmgContact}" />
+			<Link
+				press="editStepOne"
+				text="Edit" />
+			<!-- Local Address -->
+			<core:Title text="Local Address" />
+			<Label text="Address" />
+			<Text text="{register>/EmpInfoAddrLoc}" />
+			<Label text="Region" />
+			<Text text="{register>/EmpInfoRegionLoc}" />
+			<Label text="State" />
+			<Text text="{register>/EmpInfoStateLoc}" />
+			<Label text="Country" />
+			<Text text="{register>/EmpInfoCountryLoc}" />
+			<Label text="Postal Code" />
+			<Text text="{register>/EmpInfoPostLoc}" />
+			<Label text="Supporting Documents" />
+			<core:Title text="Permanent Address" />
+			<!-- Permanent Address -->
+			<Label text="Same as Local Address" />
+			<CheckBox
+				selected="{register>/EmpInfoAddrSame}"
+				editable="false" />
+			<Label text="Address" />
+			<Text text="{register>/EmpInfoAddrPerm}" />
+			<Label text="Region" />
+			<Text text="{register>/EmpInfoRegionPerm}" />
+			<Label text="State" />
+			<Text text="{register>/EmpInfoStatePerm}" />
+			<Label text="Country" />
+			<Text text="{register>/EmpInfoCountryPerm}" />
+			<Label text="Postal Code" />
+			<Text text="{register>/EmpInfoPostPerm}" />
+			<Label text="Supporting Documents" />
+			<!-- Identification Documents Group -->
+			<core:Title text="Identification Documents" />
+			<Label text="PAN Card" />
+			<Text text="{register>/EmpIdPAN}" />
+			<Label text="Aadhar Card" />
+			<Text text="{register>/EmpIdAadhar}" />
+			<Label text="Voter Card" />
+			<Text text="{register>/EmpIdVoter}" />
+			<Label text="Driving License" />
+			<Text text="{register>/EmpIdDL}" />
+			<Text text="{register>/EmpIdSSN}" />
+			<Link
+				press="editStepTwo"
+				text="Edit" />
+			<!--Passport Verification-->
+			<core:Title text="Passport Verification" />
+			<Label text="Passport" />
+			<Text text="{register>/EmpIdPassport}" />
+			<Label text="Name as Passport" />
+			<Text text="{register>/EmpIdPassportFirst} {register>/EmpIdPassportMid}" />
+			<Label text="Date of Birth as Passport" />
+			<Text text="{register>/EmpIdPassportDob}" />
+			<Label text="Issue Date" />
+			<Text text="{register>/EmpIdPassportIssueDate}" />
+			<Label text="Expiry Date" />
+			<Text text="{register>/EmpIdPassportExpiryDate}" />
+			<Label text="Issue Place" />
+			<Text text="{register>/EmpIdPassportIssuePlace}" />
+			<Link
+				press="editStepThree"
+				text="Edit" />
+		</form:content>
+	</form:SimpleForm>
+</core:FragmentDefinition>

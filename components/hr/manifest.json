@@ -1,0 +1,425 @@
+{
+  "_version": "1.12.0",
+
+  "sap.app": {
+    "id": "com.alarhoo.empflowyee.components.hr",
+    "type": "component",
+    "title": "{{hrComponentTitle}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+    "flexEnabled": false,
+    "rootView": {
+      "viewName": "com.alarhoo.empflowyee.components.hr.view.App",
+      "type": "XML",
+      "id": "hrComponent",
+      "async": true
+    },
+
+    "minUI5Version": "1.136.0",
+    "libs": {
+      "sap.ui.core": {},
+      "sap.m": {},
+      "sap.f": {}
+    },
+
+    "dependencies": {
+      "minUI5Version": "1.136.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.f": {}
+      }
+    },
+
+    "handleValidation": true,
+
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+
+    "resources": {},
+
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.alarhoo.empflowyee.components.hr.i18n.i18n",
+          "fallbackLocale": "en",
+          "async": true
+        }
+      },
+      "launchpad": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "../../model/data/Launchpad.json"
+      },
+      "side": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data/SideContent.json"
+      },
+      "emp": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data/EmployeesMain.json",
+        "preload": true
+      },
+      "empInfo": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data/EmployeesInfo.json"
+      },
+      "project": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data/Projects.json"
+      },
+      "asset": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data/Assets.json"
+      },
+      "holiday": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data/Holidays.json"
+      },
+      "ui": {
+        "type": "sap.ui.model.json.JSONModel"
+      }
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.f.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.alarhoo.empflowyee.components.hr.view",
+        "controlId": "idHRComponentApp",
+        "controlAggregation": "pages",
+        "clearControlAggregation": true,
+        "bypassed": {
+          "target": "notFoundTarget"
+        },
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "zemployee",
+          "name": "zemployeeRoute",
+          "target": "employeeTarget"
+        },
+        {
+          "pattern": "zemployee/view/employee",
+          "name": "employeeMasterRoute",
+          "target": "employeeMasterTarget"
+        },
+        {
+          "pattern": "zemployee/detail/employee/{employeeId}/{layout}",
+          "name": "employeeDetailRoute",
+          "target": ["employeeMasterTarget", "employeeDetailTarget"]
+        },
+        {
+          "pattern": "zemployee/register",
+          "name": "employeeRegisterRoute",
+          "target": "employeeRegisterTarget"
+        },
+        {
+          "pattern": "zemployee/edit/employee",
+          "name": "employeeEditViewRoute",
+          "target": "employeeEditViewTarget"
+        },
+        {
+          "pattern": "zemployee/edit/employee/{employeeId}",
+          "name": "employeeEditRoute",
+          "target": "employeeEditTarget"
+        },
+        {
+          "pattern": "zemployee/view/project",
+          "name": "projectViewRoute",
+          "target": "projectViewTarget"
+        },
+        {
+          "pattern": "zemployee/add/project",
+          "name": "projectAddRoute",
+          "target": "projectAddTarget"
+        },
+        {
+          "pattern": "zemployee/edit/project",
+          "name": "projectEditViewRoute",
+          "target": "projectEditViewTarget"
+        },
+        {
+          "pattern": "zemployee/edit/project/{projectId}",
+          "name": "projectEditRoute",
+          "target": "projectEditTarget"
+        },
+        {
+          "pattern": "zemployee/view/leave",
+          "name": "leaveViewRoute",
+          "target": "leaveViewTarget"
+        },
+        {
+          "pattern": "zemployee/add/leave",
+          "name": "leaveAddRoute",
+          "target": "leaveAddTarget"
+        },
+        {
+          "pattern": "zemployee/edit/leave",
+          "name": "leaveEditViewRoute",
+          "target": "leaveEditViewTarget"
+        },
+        {
+          "pattern": "zemployee/edit/leave/{leaveId}",
+          "name": "leaveEditRoute",
+          "target": "leaveEditTarget"
+        },
+        {
+          "pattern": "zemployee/view/holiday",
+          "name": "holidayViewRoute",
+          "target": "holidayViewTarget"
+        },
+        {
+          "pattern": "zemployee/add/holiday",
+          "name": "holidayAddRoute",
+          "target": "holidayAddTarget"
+        },
+        {
+          "pattern": "zemployee/edit/holiday",
+          "name": "holidayEditViewRoute",
+          "target": "holidayEditViewTarget"
+        },
+        {
+          "pattern": "zemployee/edit/holiday/{holidayId}",
+          "name": "holidayEditRoute",
+          "target": "holidayAddTarget"
+        },
+        {
+          "pattern": "zemployee/view/asset",
+          "name": "assetViewRoute",
+          "target": "assetViewTarget"
+        },
+        {
+          "pattern": "zemployee/add/asset",
+          "name": "assetAddRoute",
+          "target": "assetAddTarget"
+        },
+        {
+          "pattern": "zemployee/edit/asset",
+          "name": "assetEditViewRoute",
+          "target": "assetEditViewTarget"
+        },
+        {
+          "pattern": "zemployee/edit/asset/{assetId}",
+          "name": "assetEditRoute",
+          "target": "assetEditTarget"
+        }
+      ],
+      "targets": {
+        "hrMainTarget": {
+          "id": "hrMaster",
+          "name": "EmployeeMaster"
+        },
+        "toolPageTarget": {
+          "name": "ToolPage",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen"
+        },
+        "flexibleColumnLayoutTarget": {
+          "id": "FlexibleColumnLayout",
+          "name": "FlexibleColumnLayout",
+          "parent": "toolPageTarget",
+          "controlId": "idHRToolPageControlID",
+          "controlAggregation": "pages"
+        },
+        "employeeTarget": {
+          "id": "Overview",
+          "name": "Overview",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "employeeMasterTarget": {
+          "id": "EmployeeMaster",
+          "name": "EmployeeMaster",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "employeeDetailTarget": {
+          "id": "EmployeeDetail",
+          "name": "EmployeeDetail",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "midColumnPages"
+        },
+        "employeeRegisterTarget": {
+          "id": "EmployeeRegister",
+          "name": "EmployeeRegister",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "employeeEditViewTarget": {
+          "id": "EmployeeEditView",
+          "name": "EmployeeMaster",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "employeeEditTarget": {
+          "id": "EmployeeEdit",
+          "name": "EmployeeRegister",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "projectViewTarget": {
+          "id": "ProjectView",
+          "name": "ProjectView",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "projectAddTarget": {
+          "id": "ProjectAdd",
+          "name": "ProjectAdd",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "projectEditViewTarget": {
+          "id": "ProjectEditView",
+          "name": "ProjectView",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "projectEditTarget": {
+          "id": "ProjectEdit",
+          "name": "ProjectAdd",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "leaveViewTarget": {
+          "id": "LeaveView",
+          "name": "LeaveView",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages",
+          "clearControlAggregation": false
+        },
+        "leaveAddTarget": {
+          "id": "LeaveAdd",
+          "name": "LeaveAdd",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "leaveEditViewTarget": {
+          "id": "LeaveEditView",
+          "name": "LeaveView",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "leaveEditTarget": {
+          "id": "LeaveEdit",
+          "name": "LeaveAdd",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "holidayViewTarget": {
+          "id": "HolidayView",
+          "name": "HolidayView",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "holidayAddTarget": {
+          "id": "HolidayAdd",
+          "name": "HolidayAdd",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "holidayEditViewTarget": {
+          "id": "HolidayEditView",
+          "name": "HolidayView",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "holidayEditTarget": {
+          "id": "HolidayEdit",
+          "name": "HolidayAdd",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "assetViewTarget": {
+          "id": "AssetView",
+          "name": "AssetView",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "assetAddTarget": {
+          "id": "AssetAdd",
+          "name": "AssetAdd",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "assetEditViewTarget": {
+          "id": "AssetEditView",
+          "name": "AssetView",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "assetEditTarget": {
+          "id": "AssetEdit",
+          "name": "AssetAdd",
+          "path": "com.alarhoo.empflowyee.components.hr.view.zen",
+          "parent": "flexibleColumnLayoutTarget",
+          "controlId": "idHRFcl",
+          "controlAggregation": "beginColumnPages"
+        },
+        "notFoundTarget": {
+          "id": "notFound",
+          "name": "NotFound"
+        }
+      }
+    }
+  }
+}

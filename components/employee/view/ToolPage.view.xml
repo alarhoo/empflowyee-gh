@@ -1,0 +1,71 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.employee.controller.ToolPage"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<tnt:ToolPage>
+		<tnt:header>
+			<tnt:ToolHeader>
+				<Breadcrumbs>
+					<Link text="Home" />
+					<Link text="Page 1" />
+					<Link text="Page 2" />
+					<Link text="Page 3" />
+					<Link text="Page 4" />
+					<Link
+						text="Page 5"
+						press="onPageLinkPress" />
+				</Breadcrumbs>
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation selectedKey="{side>/selectedKey}">
+				<tnt:NavigationList items="{
+					path: 'side>/navigation',
+					templateShareable: false
+				}">
+					<tnt:NavigationListItem
+						text="{
+							path: 'side>title'
+						}"
+						icon="{side>icon}"
+						expanded="{side>expanded}"
+						items="{
+							path: 'side>items',
+							templateShareable: false
+						}"
+						key="{side>route}"
+						href="#/{side>route}">
+						<tnt:NavigationListItem
+							text="{
+								path: 'side>title'
+							}"
+							key="{side>route}"
+							href="#/{side>route}" />
+					</tnt:NavigationListItem>
+				</tnt:NavigationList>
+				<tnt:fixedItem>
+					<tnt:NavigationList items="{
+						path: 'side>/fixedNavigation',
+						templateShareable: false
+					}">
+						<tnt:NavigationListItem
+							text="{
+								path: 'side>titleI18nKey',
+								formatter: '.getBundleText'
+							}"
+							icon="{side>icon}"
+							key="{side>key}"
+							href="#/{side>key}" />
+					</tnt:NavigationList>
+				</tnt:fixedItem>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<NavContainer id="idEmployeeToolPageControlID" />
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</mvc:View>

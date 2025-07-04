@@ -1,0 +1,76 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.hr.controller.zen.EmployeeMaster"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	displayBlock="true"
+	height="100%">
+	<Page
+		title="Leaves View"
+		showNavButton="true"
+		showHeader="false"
+		navButtonPress="onNavBack">
+		<List
+			headerText="Employees"
+			items="{
+				path: 'emp>/'
+			}"
+			growing="true"
+			growingThreshold="150"
+			sticky="HeaderToolbar">
+			<headerToolbar>
+				<OverflowToolbar>
+					<Title
+						text="Employees ({emp>/length})"
+						level="H2" />
+					<ToolbarSpacer />
+					<SearchField width="50%" />
+					<Button
+						icon="sap-icon://sort"
+						type="Transparent" />
+				</OverflowToolbar>
+			</headerToolbar>
+			<items>
+				<CustomListItem
+					type="Active"
+					press="onListItemPress">
+					<HBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+						<Avatar
+							src="{emp>EmpMainImg}"
+							class="sapUiSmallMarginEnd" />
+						<FlexBox
+							alignItems="Start"
+							justifyContent="SpaceBetween"
+							width="100%">
+							<VBox>
+								<Title
+									text="{emp>EmpMainFirst} {emp>EmpMainLast}"
+									titleStyle="H4"
+									class="sapUiTinyMarginBottom" />
+								<ObjectAttribute
+									text="{emp>EmpMainDesignation}"
+									class="sapUiTinyMarginBottom" />
+								<Link
+									text="{emp>EmpMainEmail}"
+									href="mailto:{emp>EmpMainEmail}" />
+							</VBox>
+							<VBox class="sapUiSmallMarginEnd">
+								<ObjectIdentifier
+									title="{emp>EmpMainId}"
+									class="sapUiTinyMarginBottom" />
+								<ObjectStatus
+									text="{= ${emp>EmpMainBillable} === '1' ? 'Full-time' : 'Contractor'}"
+									state="{= ${emp>EmpMainBillable} === '1' ? 'Success' : 'Warning'}"
+									class="sapUiTinyMarginBottom" />
+								<ObjectStatus
+									icon="{= ${emp>EmpMainActive} === '1' ? 'sap-icon://sys-enter' : 'sap-icon://sys-cancel'}"
+									text="{= ${emp>EmpMainActive} === '1' ? 'Active' : 'Inactive'}"
+									state="{= ${emp>EmpMainActive} === '1' ? 'Indication14' : 'Indication12'}"
+									inverted="true" />
+							</VBox>
+						</FlexBox>
+					</HBox>
+				</CustomListItem>
+			</items>
+		</List>
+	</Page>
+</mvc:View>

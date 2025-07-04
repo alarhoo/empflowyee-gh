@@ -1,0 +1,41 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core">
+	<Popover
+		title="{Name}"
+		class="sapUiResponsivePadding--header sapUiResponsivePadding--footer"
+		placement="Bottom"
+		initialFocus="email">
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer />
+			</OverflowToolbar>
+		</footer>
+		<NotificationList items="{
+			path: '/NotificationGroups',
+			templateShareable: true
+		}">
+			<NotificationListItem
+				title="{title}"
+				description="{description}"
+				showCloseButton="{showCloseButton}"
+				datetime="{creationDate}"
+				unread="{unread}"
+				priority="{
+					path: 'priority',
+					formatter: '.priorityFormatter'
+				}"
+				authorPicture="{authorPicture}"
+				authorInitials="{authorInitials}"
+				authorAvatarColor="{authorAvatarColor}"
+				buttons="{
+					path: 'itemButtons',
+					templateShareable: true
+				}">
+				<buttons>
+					<Button text="{text}" />
+				</buttons>
+			</NotificationListItem>
+		</NotificationList>
+	</Popover>
+</c:FragmentDefinition>

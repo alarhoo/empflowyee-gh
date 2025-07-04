@@ -1,0 +1,23 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	xmlns:form="sap.ui.layout.form">
+	<form:SimpleForm
+		editable="true"
+		layout="ColumnLayout">
+		<form:content>
+			<Label text="Skill Profile" />
+			<Text text="{empDetail>/EmpMainDob}" />
+			<Label text="Utilization" />
+			<Text text="{empDetail>/EmpMainDob}" />
+			<Label text="Timesheet" />
+			<Text text="{empDetail>/EmpMainDob}" />
+			<Label text="Login Time Compliance" />
+			<Text text="{empDetail>/EmpMainDob}" />
+			<Label text="Rating" />
+			<RatingIndicator
+				value="4"
+				iconSize="20px" />
+		</form:content>
+	</form:SimpleForm>
+</c:FragmentDefinition>

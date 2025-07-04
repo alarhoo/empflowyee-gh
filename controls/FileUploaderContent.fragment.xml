@@ -1,0 +1,30 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:unified="sap.ui.unified"
+	xmlns:core="sap.ui.core">
+	<VBox>
+		<unified:FileUploader
+			icon="sap-icon://attachment"
+			iconOnly="true"
+			width="100%"
+			change=".onFileUploadChange"
+			fileType="{control>/fileType}"
+			placeholder="{control>/placeholder}"
+			tooltip="{control>/tooltip}" />
+		<HBox>
+			<Link
+				text="Preview"
+				visible="{= !!${control>/documentSource} }"
+				press=".onPreviewPress"
+				class="sapUiSmallMarginEnd" />
+			<Link
+				text="Clear"
+				visible="{= !!${control>/documentSource} }"
+				press=".onClearUpload"
+				class="sapUiSmallMarginEnd" />
+			<Text
+				text="{= ${control>/fileSize} ? '(' + ${control>/fileSize} + ')' : '' }"
+				visible="{= !!${control>/fileSize} }" />
+		</HBox>
+	</VBox>
+</core:FragmentDefinition>

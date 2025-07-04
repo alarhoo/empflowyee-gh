@@ -1,0 +1,27 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.hr.controller.zen.Overview"
+	xmlns="sap.m"
+	xmlns:base="sap.ui.base"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:controls="com.alarhoo.empflowyee.controls"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<Page
+		showNavButton="true"
+		title="Organization Chart">
+		<content>
+			<VBox height="100%">
+				<controls:D3Chart
+					chartType="org"
+					title=""
+					showLegend="false"
+					data="{/orgData}">
+					<controls:data>
+						<base:ManagedObject />
+					</controls:data>
+				</controls:D3Chart>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

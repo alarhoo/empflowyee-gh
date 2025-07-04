@@ -1,0 +1,134 @@
+[
+  {
+    "HolId": "HOL-001",
+    "HolDate": "2025-01-01",
+    "HolName": "New Year's Day",
+    "HolType": "Public Holiday",
+    "HolSendMail": "Yes",
+    "HolNoteRichText": "Happy New Year! 🎉",
+    "HolRecurring": "Yes",
+    "HolImage": "",
+    "HolFloating": "No"
+  },
+  {
+    "HolId": "HOL-002",
+    "HolDate": "2025-02-14",
+    "HolName": "Valentine's Day",
+    "HolType": "Celebration",
+    "HolSendMail": "Yes",
+    "HolNoteRichText": "Remember Jim's card for Pam? 💌",
+    "HolRecurring": "Yes",
+    "HolImage": "",
+    "HolFloating": "No"
+  },
+  {
+    "HolId": "HOL-003",
+    "HolDate": "2025-03-17",
+    "HolName": "St. Patrick's Day",
+    "HolType": "Theme Day",
+    "HolSendMail": "No",
+    "HolNoteRichText": "Dress code: Kelly Green! ☘️",
+    "HolRecurring": "Yes",
+    "HolImage": "",
+    "HolFloating": "Yes"
+  },
+  {
+    "HolId": "HOL-004",
+    "HolDate": "2025-04-01",
+    "HolName": "Prank Day",
+    "HolType": "Unofficial",
+    "HolSendMail": "No",
+    "HolNoteRichText": "Expect Jell-O staplers everywhere.",
+    "HolRecurring": "Yes",
+    "HolImage": "",
+    "HolFloating": "Yes"
+  },
+  {
+    "HolId": "HOL-005",
+    "HolDate": "2025-10-31",
+    "HolName": "Halloween",
+    "HolType": "Festival",
+    "HolSendMail": "Yes",
+    "HolNoteRichText": "Don't forget Dwight's Sith Lord costume.",
+    "HolRecurring": "Yes",
+    "HolImage": "",
+    "HolFloating": "No"
+  },
+  {
+    "HolId": "HOL-006",
+    "HolDate": "2025-11-24",
+    "HolName": "Pretzel Day",
+    "HolType": "Company Culture",
+    "HolSendMail": "Yes",
+    "HolNoteRichText": "Stanley's favorite day of the year 🥨",
+    "HolRecurring": "Yes",
+    "HolImage": "",
+    "HolFloating": "Yes"
+  },
+  {
+    "HolId": "HOL-007",
+    "HolDate": "2025-12-15",
+    "HolName": "Secret Santa Day",
+    "HolType": "Office Tradition",
+    "HolSendMail": "Yes",
+    "HolNoteRichText": "Hope no one trades an iPod for an oven mitt.",
+    "HolRecurring": "Yes",
+    "HolImage": "",
+    "HolFloating": "No"
+  },
+  {
+    "HolId": "HOL-008",
+    "HolDate": "2025-12-25",
+    "HolName": "Christmas",
+    "HolType": "Public Holiday",
+    "HolSendMail": "Yes",
+    "HolNoteRichText": "“Yankee Swap” is not an HR-approved term.",
+    "HolRecurring": "Yes",
+    "HolImage": "",
+    "HolFloating": "No"
+  },
+  {
+    "HolId": "HOL-009",
+    "HolDate": "2025-11-04",
+    "HolName": "Diwali",
+    "HolType": "Cultural",
+    "HolSendMail": "Yes",
+    "HolNoteRichText": "Michael’s Bollywood dance reprise optional 🎊",
+    "HolRecurring": "Yes",
+    "HolImage": "",
+    "HolFloating": "No"
+  },
+  {
+    "HolId": "HOL-010",
+    "HolDate": "2025-06-01",
+    "HolName": "Dunder Mifflin Appreciation Day",
+    "HolType": "Company Event",
+    "HolSendMail": "Yes",
+    "HolNoteRichText": "Free merch for all Scranton employees.",
+    "HolRecurring": "Yes",
+    "HolImage": "",
+    "HolFloating": "Yes"
+  },
+  {
+    "HolId": "HOL-011",
+    "HolDate": "2025-05-15",
+    "HolName": "Office Olympics",
+    "HolType": "Team Building",
+    "HolSendMail": "Yes",
+    "HolNoteRichText": "Bring your yogurt lids. 🥇",
+    "HolRecurring": "Yes",
+    "HolImage": "",
+    "HolFloating": "Yes"
+  },
+  {
+    "HolId": "HOL-012",
+    "HolDate": "2025-07-10",
+    "HolName": "The Dundies",
+    "HolType": "Award Ceremony",
+    "HolSendMail": "Yes",
+    "HolNoteRichText": "Best Dundie Location: Chili’s.",
+    "HolRecurring": "Yes",
+    "HolImage": "",
+    "HolFloating": "Yes"
+  }
+]

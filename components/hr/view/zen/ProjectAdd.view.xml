@@ -1,0 +1,178 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.hr.controller.zen.HolidayAdd"
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<Page
+		title="Add Project"
+		showNavButton="true"
+		showHeader="false"
+		navButtonPress="onNavBack">
+		<content>
+			<form:SimpleForm
+				title="Add Project"
+				editable="true"
+				labelSpanL="2"
+				emptySpanL="1"
+				emptySpanM="1"
+				columnsL="1">
+				<!-- Project Details Section -->
+				<core:Title text="Project Information" />
+				<Label
+					text="Project ID"
+					required="true" />
+				<Input
+					value="{project>/pr_pk}"
+					placeholder="e.g. 123"
+					type="Number"
+					required="true"
+					valueStateText="Project ID is required." />
+				<Label
+					text="Project Name"
+					required="true" />
+				<Input
+					value="{project>/pr_name}"
+					placeholder="e.g. Employee Portal Development"
+					required="true"
+					valueStateText="Project Name is required." />
+				<Label text="Description" />
+				<TextArea
+					value="{project>/pr_desc}"
+					placeholder="e.g. Development of a new web portal for employee self-service."
+					rows="3"
+					valueLiveUpdate="true" />
+				<Label text="Client ID" />
+				<Input
+					value="{project>/pr_cl_pk}"
+					placeholder="e.g. CL101" />
+				<Label text="Manager" />
+				<Input
+					value="{project>/pr_mgr}"
+					placeholder="e.g. Michael Scott" />
+				<Label text="Onshore Lead" />
+				<Input
+					value="{project>/pr_on_lead}"
+					placeholder="e.g. Dwight Schrute" />
+				<Label text="Offshore Lead" />
+				<Input
+					value="{project>/pr_off_lead}"
+					placeholder="e.g. Andy Bernard" />
+				<Label text="Architect" />
+				<Input
+					value="{project>/pr_architect}"
+					placeholder="e.g. Pam Beesly" />
+				<!-- Employee Project Assignment Section -->
+				<!-- <core:Title
+					text="Employee Assignment"
+					class="sapUiMediumMarginTop" />
+				<Label
+					text="Employee ID"
+					required="true" />
+				<Input
+					value="{employeeProject>/emp_pr_emp_main}"
+					placeholder="e.g. 100"
+					type="Number"
+					required="true"
+					liveChange="onAssignmentDetailsChange"
+					valueStateText="Employee ID is required for assignment." />
+				<Label
+					text="Project ID (Assigned)"
+					required="true" />
+				<Input
+					value="{employeeProject>/emp_pr_pro_main}"
+					placeholder="e.g. 123"
+					type="Number"
+					required="true"
+					liveChange="onAssignmentDetailsChange"
+					valueStateText="Project ID is required for assignment." />
+				<Label
+					text="Start Date"
+					required="true" />
+				<DatePicker
+					value="{
+						path: 'employeeProject>/emp_pr_start',
+						type: 'sap.ui.model.type.Date',
+						formatOptions: {
+							source: {
+								pattern: 'yyyy-MM-dd'
+							},
+							pattern: 'yyyy-MM-dd'
+						}
+					}"
+					valueFormat="yyyy-MM-dd"
+					displayFormat="medium"
+					placeholder="e.g. 2025-01-01"
+					required="true"
+					change="onAssignmentDetailsChange"
+					valueStateText="Start Date is required." />
+				<Label text="End Date" />
+				<DatePicker
+					value="{
+						path: 'employeeProject>/emp_pr_end',
+						type: 'sap.ui.model.type.Date',
+						formatOptions: {
+							source: {
+								pattern: 'yyyy-MM-dd'
+							},
+							pattern: 'yyyy-MM-dd'
+						}
+					}"
+					valueFormat="yyyy-MM-dd"
+					displayFormat="medium"
+					placeholder="e.g. 2025-12-31"
+					change="onAssignmentDetailsChange" />
+				<Label
+					text="Hours per Period"
+					required="true" />
+				<Input
+					value="{employeeProject>/emp_pr_hrs}"
+					placeholder="e.g. 40"
+					type="Number"
+					required="true"
+					liveChange="onAssignmentDetailsChange"
+					valueStateText="Hours per Period are required." />
+				<Label
+					text="Period"
+					required="true" />
+				<Select
+					selectedKey="{employeeProject>/emp_pr_period}"
+					required="true"
+					change="onAssignmentDetailsChange"
+					valueStateText="Period is required.">
+					<core:Item
+						key="weekly"
+						text="Weekly" />
+					<core:Item
+						key="monthly"
+						text="Monthly" />
+					<core:Item
+						key="daily"
+						text="Daily" />
+				</Select> -->
+			</form:SimpleForm>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<Button
+					icon="sap-icon://alert"
+					text="{=${message>/}.length}"
+					visible="{=${message>/}.length > 0}"
+					type="Emphasized"
+					press="onMessagePopoverPress" />
+				<ToolbarSpacer />
+				<Button
+					text="Save"
+					type="Accept"
+					icon="sap-icon://save" />
+				<Button
+					text="Reset"
+					type="Reject"
+					icon="sap-icon://decline" />
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

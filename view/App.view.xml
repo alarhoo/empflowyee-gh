@@ -1,0 +1,25 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.controller.App"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc">
+	<!-- <App id="appRootControlID" /> -->
+	<App>
+		<pages>
+			<tnt:ToolPage>
+				<tnt:header>
+					<core:Fragment
+						fragmentName="com.alarhoo.empflowyee.fragments.Shell"
+						type="XML" />
+				</tnt:header>
+				<tnt:sideContent>
+				</tnt:sideContent>
+				<tnt:mainContents>
+					<NavContainer id="appRootControlID" />
+				</tnt:mainContents>
+			</tnt:ToolPage>
+		</pages>
+	</App>
+</mvc:View>

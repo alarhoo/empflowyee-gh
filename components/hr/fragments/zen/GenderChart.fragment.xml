@@ -1,0 +1,38 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:core="sap.ui.core"
+	xmlns:card="sap.f.cards"
+	xmlns:base="sap.ui.base"
+	xmlns:controls="com.alarhoo.empflowyee.controls">
+	<f:Card
+		class="events"
+		width="auto">
+		<f:header>
+			<card:Header
+				title="Gender Distribution"
+				subtitle="all data"
+				iconSrc="sap-icon://gender-male-and-female" />
+		</f:header>
+		<f:content>
+			<!-- <controls:D3Chart
+				title=""
+				chartType="pie"
+				showLegend="false"
+				height="240"
+				data="{/genderData}">
+				<controls:data>
+					<base:ManagedObject />
+				</controls:data>
+			</controls:D3Chart> -->
+			<controls:D3Chart
+				height="300"
+				chartType="microDonut"
+				data="{/microDonutData}">
+				<controls:data>
+					<base:ManagedObject />
+				</controls:data>
+			</controls:D3Chart>
+		</f:content>
+	</f:Card>
+</core:FragmentDefinition>

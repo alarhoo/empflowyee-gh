@@ -1,0 +1,82 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Table
+		items="{
+			path: 'leaveHistory>/',
+			sorter: {
+				path: 'leaveHistory>lv_start'
+			}
+		}"
+		sticky="ColumnHeaders,HeaderToolbar">
+		<headerToolbar>
+			<OverflowToolbar design="Solid">
+				<Title
+					text="Leaves ({leaveHistory>/length})"
+					level="H2" />
+				<ToolbarSpacer />
+				<Button
+					tooltip="Sort"
+					icon="sap-icon://sort"
+					press="handleSortButtonPressed" />
+				<Button
+					tooltip="Filter"
+					icon="sap-icon://filter"
+					press="handleFilterButtonPressed" />
+				<Button
+					tooltip="Group"
+					icon="sap-icon://group-2"
+					press="handleGroupButtonPressed" />
+				<Button
+					icon="sap-icon://excel-attachment"
+					press="handleExportButtonPressed" />
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column>
+				<Text text="Type" />
+			</Column>
+			<Column
+				demandPopin="true"
+				minScreenWidth="Tablet"
+				popinDisplay="Inline">
+				<Text text="Start Date" />
+			</Column>
+			<Column
+				demandPopin="true"
+				minScreenWidth="Tablet"
+				popinDisplay="Inline">
+				<Text text="End Date" />
+			</Column>
+			<Column
+				demandPopin="true"
+				minScreenWidth="Tablet"
+				popinDisplay="Inline">
+				<Text text="Approver" />
+			</Column>
+			<Column>
+				<Text text="Comments" />
+			</Column>
+			<Column
+				demandPopin="true"
+				minScreenWidth="Tablet"
+				popinDisplay="Inline">
+				<Text text="Status" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{leaveHistory>lv_type}" />
+					<Text text="{leaveHistory>lv_start}" />
+					<Text text="{leaveHistory>lv_end}" />
+					<Text text="{leaveHistory>lv_emp_main_mgr}" />
+					<Text text="{leaveHistory>lv_comment}" />
+					<ObjectStatus
+						text="{leaveHistory>lv_status}"
+						state="{= ${leaveHistory>lv_status} === 'Approved' ? 'Success' : 'Error'}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>

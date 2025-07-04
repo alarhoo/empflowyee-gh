@@ -1,0 +1,37 @@
+<mvc:View
+	controllerName=""
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<Page
+		title="Add Asset"
+		showNavButton="true"
+		showHeader="false"
+		navButtonPress="onNavBack">
+		<content>
+			<List
+				items="{asset>/}"
+				includeItemInSelection="true">
+				<headerToolbar>
+					<OverflowToolbar>
+						<content>
+							<Title
+								text="Assets ({asset>/length})"
+								level="H2" />
+							<ToolbarSpacer />
+						</content>
+					</OverflowToolbar>
+				</headerToolbar>
+				<StandardListItem
+					title="{asset>AssetName}"
+					description="{asset>AssetId}"
+					icon="{asset>AssetImage}"
+					iconDensityAware="false"
+					iconInset="false"
+					press="handlePress" />
+			</List>
+		</content>
+	</Page>
+</mvc:View>

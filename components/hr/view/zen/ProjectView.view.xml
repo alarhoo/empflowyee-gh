@@ -1,0 +1,140 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.hr.controller.zen.HolidayView"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	displayBlock="true"
+	height="100%">
+	<Page
+		title="Project View"
+		showNavButton="true"
+		showHeader="false"
+		navButtonPress="onNavBack">
+		<l:VerticalLayout
+			width="100%"
+			class="sapUiContentPaddings">
+			<FlexBox
+				wrap="Wrap"
+				class="sapUiContentPadding"
+				items="{
+					path: 'project>/Projects',
+					templateShareable: false
+				}">
+				<VBox
+					width="480px"
+					class="sapUiSmallMargin cardStyle"
+					backgroundDesign="Translucent">
+					<ObjectHeader
+						icon="{project>PrjImg}"
+						iconAlt="{project>PrjName}"
+						title="{project>PrjName}"
+						intro="{project>PrjId} / Client name"
+						number="$100"
+						numberState="Information"
+						titleLevel="H4"
+						responsive="true"
+						class="sapUiResponsivePadding--headers">
+						<ObjectAttribute text="{project>PrjArchitect}" />
+						<ObjectAttribute text="{project>PrjLeadOnshore}, {project>PrjLeadOffshore}" />
+						<statuses>
+							<ObjectStatus
+								text="Pending"
+								inverted="true"
+								state="Indication06" />
+						</statuses>
+					</ObjectHeader>
+					<HBox justifyContent="SpaceBetween">
+						<HBox
+							wrap="Wrap"
+							width="50%"
+							alignItems="Start"
+							renderType="Bare"
+							class="sapUiSmallMargin avatarGroupWrapper">
+							<f:AvatarGroup
+								groupType="Group"
+								tooltip="Avatar Group"
+								avatarDisplaySize="XS"
+								items="{
+									path: 'emp>/',
+									templateShareable: false
+								}"
+								xmlns:f="sap.f">
+								<f:AvatarGroupItem
+									initials="{emp>EmpMainFirst}"
+									fallbackIcon="sap-icon://employee"
+									src="{emp>EmpMainImg}" />
+							</f:AvatarGroup>
+						</HBox>
+						<HBox class="sapUiSmallMargin">
+							<Button
+								text="Edit"
+								type="Neutral"
+								class="sapUiTinyMarginEnd" />
+							<Button
+								text="Detail"
+								type="Emphasized" />
+						</HBox>
+					</HBox>
+					<!-- <HBox
+						class="sapUiSmallMargin"
+						justifyContent="SpaceBetween"
+						backgroundDesign="Translucent">
+						<ObjectIdentifier title="{project>PrjName}" />
+						<ObjectStatus text="{project>PrjId}" />
+					</HBox>
+					<HBox
+						class="sapUiSmallMargin"
+						justifyContent="SpaceBetween">
+						<Avatar src="{project>PrjImg}" />
+						<VBox>
+							<ObjectAttribute
+								title="Onshore Lead"
+								text="{project>PrjLeadOnshore}" />
+							<ObjectAttribute
+								title="Offshore Lead"
+								text="{project>PrjLeadOnshore}" />
+						</VBox>
+					</HBox>
+					<HBox renderType="Bare">
+						<Label text="People" />
+						<HBox
+							wrap="Wrap"
+							width="50%"
+							alignItems="Start"
+							renderType="Bare"
+							class="avatarGroupWrapper">
+							<f:AvatarGroup
+								groupType="Group"
+								tooltip="Avatar Group"
+								avatarDisplaySize="XS"
+								items="{
+									path: 'emp>/'
+								}"
+								xmlns:f="sap.f">
+								<f:AvatarGroupItem
+									initials="{emp>EmpMainFirst}"
+									fallbackIcon="sap-icon://employee"
+									src="{emp>EmpMainImg}" />
+							</f:AvatarGroup>
+						</HBox>
+						<ObjectAttribute
+							title="Completed Tasks"
+							text="{project>PrjComments} / {project>PrjArchitect}" />
+					</HBox>
+					<ProgressIndicator
+						percentValue="{project>PrjBillableHrs}"
+						displayValue="{project>PrjBillableHrs}%"
+						state="Success" />
+					<HBox justifyContent="SpaceBetween">
+						<Button
+							text="View Details"
+							type="Transparent" />
+						<Button
+							text="Edit Project Info"
+							type="Emphasized" />
+					</HBox> -->
+				</VBox>
+			</FlexBox>
+		</l:VerticalLayout>
+	</Page>
+</mvc:View>

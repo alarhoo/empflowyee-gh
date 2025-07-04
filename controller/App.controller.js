@@ -1,0 +1,2 @@
+sap.ui.define(["./BaseController"],function(e){"use strict";return e.extend("com.alarhoo.empflowyee.controller.App",{onInit:function(){this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass())},onShellBarHomeIconPressed:function(){this.getOwnerComponent().getRouter().navTo("launchpad")},onShellBarNotificationsPressed:function(){this.getOwnerComponent().getRouter().navTo("notifications")}})});
+//# sourceMappingURL=App.controller.js.map

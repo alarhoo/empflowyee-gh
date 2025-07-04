@@ -1,0 +1,71 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	xmlns:form="sap.ui.layout.form">
+	<form:SimpleForm
+		editable="true"
+		layout="ColumnLayout">
+		<form:content>
+			<Label
+				text="Contact Number"
+				required="true" />
+			<Input
+				value="{
+					path: 'empDetail>/EmpInfoPriContact',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 7,
+						maxLength: 20
+					}
+				}"
+				editable="{empDetail>/isEditable}"
+				placeholder="Enter contact number"
+				required="true" />
+			<Label
+				text="Emergency Contact Name"
+				required="true" />
+			<Input
+				value="{
+					path: 'empDetail>/EmpInfoEmgName',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 2,
+						maxLength: 50
+					}
+				}"
+				editable="{empDetail>/isEditable}"
+				placeholder="Enter emergency contact name"
+				required="true" />
+			<Label
+				text="Emergency Contact Number"
+				required="true" />
+			<Input
+				value="{
+					path: 'empDetail>/EmpInfoEmgContact',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 7,
+						maxLength: 20
+					}
+				}"
+				editable="{empDetail>/isEditable}"
+				placeholder="Enter emergency contact number"
+				required="true" />
+			<Label
+				text="Relation to Contact"
+				required="true" />
+			<Input
+				value="{
+					path: 'empDetail>/EmpInfoEmgRel',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 2,
+						maxLength: 30
+					}
+				}"
+				editable="{empDetail>/isEditable}"
+				placeholder="Enter relation"
+				required="true" />
+		</form:content>
+	</form:SimpleForm>
+</c:FragmentDefinition>

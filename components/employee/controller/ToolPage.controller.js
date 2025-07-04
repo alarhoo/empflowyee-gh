@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(e){"use strict";return e.extend("com.alarhoo.empflowyee.components.employee.controller.ToolPage",{onInit:function(){const e=this.getOwnerComponent().getModel("launchpad");const o=e.getProperty("/groups").find(e=>e.id==="idEmployeeSelfService");console.log(o);this.getOwnerComponent().getModel("side").setProperty("/navigation",o.tiles)},onPageLinkPress:function(){this.getOwnerComponent().getRouter().navTo("applyLeave")}})});
+//# sourceMappingURL=ToolPage.controller.js.map

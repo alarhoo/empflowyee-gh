@@ -1,0 +1,40 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:card="sap.f.cards"
+	xmlns:c="sap.ui.core">
+	<f:Card
+		class="sapUiMediumMargin"
+		width="300px">
+		<f:header>
+			<card:Header
+				title="Upcoming Birthdays"
+				subtitle="in next 30 days" />
+		</f:header>
+		<f:content>
+			<List
+				class="sapUiSmallMarginBottom"
+				showSeparators="None"
+				items="{
+					path: 'products>/productItems'
+				}">
+				<CustomListItem>
+					<HBox
+						alignItems="Center"
+						justifyContent="SpaceBetween">
+						<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+							<Title
+								level="H3"
+								text="{products>title}" />
+							<Text text="{products>subtitle}" />
+						</VBox>
+						<ObjectStatus
+							class="sapUiTinyMargin sapUiSmallMarginEnd"
+							text="{products>revenue}"
+							state="{products>statusSchema}" />
+					</HBox>
+				</CustomListItem>
+			</List>
+		</f:content>
+	</f:Card>
+</c:FragmentDefinition>

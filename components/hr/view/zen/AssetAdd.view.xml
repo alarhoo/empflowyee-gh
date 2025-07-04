@@ -1,0 +1,97 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.hr.controller.zen.AssetAdd"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:controls="com.alarhoo.empflowyee.controls"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<Page
+		title="Add Asset"
+		showNavButton="true"
+		showHeader="false"
+		navButtonPress="onNavBack">
+		<content>
+			<form:SimpleForm
+				title="Add Asset"
+				editable="true"
+				labelSpanL="3"
+				labelSpanM="3"
+				emptySpanL="3"
+				emptySpanM="3"
+				columnsL="1">
+				<!-- Sub Category Dropdown -->
+				<Label text="Sub Category" />
+				<Select
+					items="{/subCategories}"
+					selectedKey="{newAsset/am_sub_pk}">
+					<core:Item
+						key="{sub_pk}"
+						text="{sub_name}" />
+				</Select>
+				<!-- Brand Dropdown -->
+				<Label text="Brand" />
+				<Select
+					items="{/brands}"
+					selectedKey="{newAsset/am_br_pk}">
+					<core:Item
+						key="{br_pk}"
+						text="{br_name}" />
+				</Select>
+				<!-- Text Inputs -->
+				<Label text="Document No" />
+				<Input value="{newAsset/am_doc}" />
+				<Label text="Purchase Date" />
+				<DatePicker value="{newAsset/am_purchase}" />
+				<Label text="Cost" />
+				<Input
+					value="{newAsset/am_cost}"
+					type="Number" />
+				<Label text="Exchange" />
+				<Input value="{newAsset/am_exchange}" />
+				<Label text="Vendor" />
+				<Input value="{newAsset/am_vendor}" />
+				<Label text="Serial No" />
+				<Input value="{newAsset/am_serial}" />
+				<Label text="Status" />
+				<Input value="{newAsset/am_status}" />
+				<Label text="Model" />
+				<Input value="{newAsset/am_model}" />
+				<Label text="Image URL" />
+				<Input value="{newAsset/am_img}" />
+				<Label text="ISBN" />
+				<Input value="{newAsset/am_ISBN}" />
+				<Label text="Warranty Expiry" />
+				<DatePicker value="{newAsset/am_warranty}" />
+				<Label text="Add Image" />
+				<controls:FileUploader label="Asset Document" />
+				<Label text="Comments" />
+				<TextArea
+					value="{newAsset/am_comments}"
+					growing="true"
+					rows="3" />
+			</form:SimpleForm>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<Button
+					icon="sap-icon://alert"
+					text="{=${message>/}.length}"
+					visible="{=${message>/}.length > 0}"
+					type="Emphasized"
+					press="onMessagePopoverPress" />
+				<ToolbarSpacer />
+				<Button
+					text="Save"
+					type="Accept"
+					icon="sap-icon://save" />
+				<Button
+					text="Reset"
+					type="Reject"
+					icon="sap-icon://decline" />
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

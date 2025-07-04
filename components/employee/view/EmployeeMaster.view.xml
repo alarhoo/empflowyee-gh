@@ -1,0 +1,98 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.employee.controller.EmployeeMaster"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	displayBlock="true"
+	height="100%">
+	<f:DynamicPage
+		toggleHeaderOnTitleClick="false"
+		class="sapUiNoContentPadding">
+		<!-- DynamicPage Title -->
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<Title text="Employeessss ({emp>/length})" />
+				</f:heading>
+			</f:DynamicPageTitle>
+		</f:title>
+		<!-- DynamicPage Content -->
+		<f:content>
+			<List
+				headerText="Employees"
+				items="{
+					path: 'emp>/'
+				}"
+				growing="true"
+				growingThreshold="150"
+				sticky="HeaderToolbar">
+				<headerToolbar>
+					<OverflowToolbar>
+						<Title
+							text="Employees"
+							level="H2" />
+						<ToolbarSpacer />
+						<SearchField width="50%" />
+						<Button
+							icon="sap-icon://sort"
+							type="Transparent" />
+					</OverflowToolbar>
+				</headerToolbar>
+				<items>
+					<CustomListItem
+						type="Active"
+						press=".onEmployeeListItemPress">
+						<HBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+							<Avatar
+								src=""
+								class="sapUiSmallMarginEnd" />
+							<FlexBox
+								alignItems="Start"
+								justifyContent="SpaceBetween"
+								width="100%">
+								<VBox>
+									<Title
+										text="{emp>EmpMainFirst} {emp>EmpMainLast}"
+										titleStyle="H4"
+										class="sapUiTinyMarginBottom" />
+									<ObjectAttribute
+										text="{emp>EmpMainDesignation}"
+										class="sapUiTinyMarginBottom" />
+									<Link
+										text="{emp>EmpMainEmail}"
+										href="mailto:{emp>EmpMainEmail}" />
+								</VBox>
+								<VBox class="sapUiSmallMarginEnd">
+									<ObjectIdentifier
+										title="{emp>EmpMainId}"
+										class="sapUiTinyMarginBottom" />
+									<ObjectStatus
+										text="{= ${emp>EmpMainBillable} === '1' ? 'Full-time' : 'Contractor'}"
+										state="{= ${emp>EmpMainBillable} === '1' ? 'Success' : 'Warning'}"
+										class="sapUiTinyMarginBottom" />
+									<ObjectStatus
+										icon="{= ${emp>EmpMainActive} === '1' ? 'sap-icon://sys-enter' : 'sap-icon://sys-cancel'}"
+										text="{= ${emp>EmpMainActive} === '1' ? 'Active' : 'Inactive'}"
+										state="{= ${emp>EmpMainActive} === '1' ? 'Indication14' : 'Indication12'}"
+										inverted="true" />
+								</VBox>
+							</FlexBox>
+						</HBox>
+					</CustomListItem>
+				</items>
+			</List>
+		</f:content>
+		<!-- DynamicPage Footer -->
+		<f:footer>
+			<OverflowToolbar>
+				<ToolbarSpacer />
+				<Button
+					type="Accept"
+					text="Accept" />
+				<Button
+					type="Reject"
+					text="Reject" />
+			</OverflowToolbar>
+		</f:footer>
+	</f:DynamicPage>
+</mvc:View>

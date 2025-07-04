@@ -1,0 +1,60 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.hr.controller.zen.HolidayView"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	height="100%">
+	<Page
+		title="Holiday View"
+		showNavButton="true"
+		showHeader="false"
+		navButtonPress="onNavBack">
+		<List items="{
+			path: 'holiday>/'
+		}">
+			<headerToolbar>
+				<OverflowToolbar>
+					<content>
+						<Title
+							text="Holidays ({holiday>/length})"
+							level="H2" />
+						<ToolbarSpacer />
+						<Label
+							text="Year:"
+							labelFor="year" />
+						<Select
+							id="year"
+							selectedKey="2025"
+							items="{year>/years}">
+							<items>
+								<core:Item
+									key="{year>key}"
+									text="{year>text}" />
+							</items>
+						</Select>
+					</content>
+				</OverflowToolbar>
+			</headerToolbar>
+			<CustomListItem
+				type="Detail"
+				detailPress="onHolidayEditPress">
+				<HBox>
+					<Image
+						src="https://hips.hearstapps.com/hmg-prod/images/msdficl-ec004-1666343004.jpeg"
+						width="5em"
+						class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
+					<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+						<Title
+							level="H3"
+							text="{holiday>HolName}" />
+						<Link
+							text="{holiday>HolDate}"
+							target="{holiday>hol_note_image}" />
+						<Label text="{holiday>hol_text_before_image}" />
+					</VBox>
+				</HBox>
+			</CustomListItem>
+		</List>
+	</Page>
+</mvc:View>

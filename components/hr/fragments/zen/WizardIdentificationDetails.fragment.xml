@@ -1,0 +1,130 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:controls="com.alarhoo.empflowyee.controls">
+	<form:SimpleForm
+		editable="true"
+		layout="ColumnLayout">
+		<form:content>
+			<!-- Identification Details -->
+			<core:Title text="Identification Details" />
+			<Label
+				text="PAN Card"
+				required="true" />
+			<Input
+				placeholder="PAN Card Number"
+				value="{register>/EmpIdPAN}"
+				liveChange="onIdentificationDetailsLiveChange" />
+			<controls:FileUploader
+				label="PAN Document"
+				change="onFileUploadChange" />
+			<Label
+				text="Aadhar Card"
+				required="true" />
+			<Input
+				type="Number"
+				placeholder="Aadhar Card Number"
+				value="{register>/EmpIdAadhar}"
+				liveChange="onIdentificationDetailsLiveChange" />
+			<controls:FileUploader
+				label="Aadhar Document"
+				change="onFileUploadChange" />
+			<Label text="Voter Card" />
+			<Input
+				placeholder="Voter Card Number"
+				value="{register>/EmpIdVoter}" />
+			<controls:FileUploader
+				label="Voter Document"
+				change="onFileUploadChange" />
+			<Label text="Driving License" />
+			<Input
+				placeholder="Driving License Number"
+				value="{register>/EmpIdDL}" />
+			<controls:FileUploader
+				label="Driving License Document"
+				change="onFileUploadChange" />
+			<Label text="SSN" />
+			<Input
+				placeholder="SSN"
+				value="{register>/EmpIdSSN}" />
+			<controls:FileUploader
+				label="SSN Document"
+				change="onFileUploadChange" />
+			<!--Passport Verification-->
+			<core:Title text="Passport Verification" />
+			<Label text="Passport Number" />
+			<Input
+				placeholder="Passport Number"
+				value="{register>/EmpIdPassport}" />
+			<controls:FileUploader
+				label="Passport Document"
+				change="onFileUploadChange" />
+			<Label text="First Name as Passport" />
+			<Input
+				placeholder="Michael"
+				value="{
+					path: 'register>/EmpIdPassportFirst',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 1,
+						maxLength: 50
+					}
+				}" />
+			<Input
+				placeholder="Scott"
+				value="{
+					path: 'register>/EmpIdPassportMid',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 0,
+						maxLength: 50
+					}
+				}" />
+			<Label text="Birth as Passport" />
+			<DatePicker
+				value="{
+					path: 'register>/EmpIdPassportDob',
+					type: 'sap.ui.model.type.Date',
+					constraints: {
+					}
+				}"
+				placeholder="dd-MM-yyyy"
+				valueFormat="dd-MM-yyyy"
+				displayFormat="dd-MM-yyyy" />
+			<Label text="Issue Date" />
+			<DatePicker
+				value="{
+					path: 'register>/EmpIdPassportIssueDate',
+					type: 'sap.ui.model.type.Date',
+					constraints: {
+					}
+				}"
+				placeholder="dd-MM-yyyy"
+				valueFormat="dd-MM-yyyy"
+				displayFormat="dd-MM-yyyy" />
+			<Label text="Expiry Date" />
+			<DatePicker
+				value="{
+					path: 'register>/EmpIdPassportExpiryDate',
+					type: 'sap.ui.model.type.Date',
+					constraints: {
+					}
+				}"
+				placeholder="dd-MM-yyyy"
+				valueFormat="dd-MM-yyyy"
+				displayFormat="dd-MM-yyyy" />
+			<Label text="Issue Place" />
+			<Input
+				placeholder="New York"
+				value="{
+					path: 'register>/EmpIdPassportIssuePlace',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 2,
+						maxLength: 64
+					}
+				}" />
+		</form:content>
+	</form:SimpleForm>
+</core:FragmentDefinition>

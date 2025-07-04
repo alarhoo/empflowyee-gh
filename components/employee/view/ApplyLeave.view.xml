@@ -1,0 +1,122 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.employee.controller.ApplyLeave"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:file="com.alarhoo.empflowyee.controls"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<Page
+		title="Create Leave Request"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+		<content>
+			<VBox class="sapUiSmallMargins">
+				<form:SimpleForm
+					editable="true"
+					layout="ResponsiveGridLayout"
+					labelSpanL="3"
+					labelSpanM="4"
+					adjustLabelSpan="false"
+					emptySpanL="4"
+					emptySpanM="0"
+					columnsL="1"
+					columnsM="1">
+					<!-- Leave Type -->
+					<Label
+						text="Leave Type"
+						required="true" />
+					<Select selectedKey="{leaveRequest>/LeaveType}">
+						<items>
+							<core:Item
+								key="leave"
+								text="Leave" />
+							<core:Item
+								key="sick"
+								text="Sick Leave" />
+							<!-- Add more types if needed -->
+						</items>
+					</Select>
+					<!-- Date -->
+					<Label
+						text="Start / End Date"
+						required="true" />
+					<DateRangeSelection
+						required="true"
+						value="{
+							type: 'sap.ui.model.type.DateInterval',
+							parts: [{
+								type: 'sap.ui.model.type.Date',
+								path: 'leaveRequest>/StartDate'
+							}, {
+								type: 'sap.ui.model.type.Date',
+								path: 'leaveRequest>/EndDate'
+							}]
+						}"
+						minDate="{ui>/minDate}"
+						maxDate="{ui>/maxDate}" />
+					<!-- Days Available -->
+					<Label text="" />
+					<Text text="18 Days Available / 3 Days will be consumed" />
+					<!-- Is it half day -->
+					<Label text="Is it half day leave?" />
+					<Switch
+						customTextOff="No"
+						customTextOn="Yes"
+						state="{leaveRequest>/IsHalfDay}" />
+					<!-- Approvers -->
+					<Label
+						text="Approvers"
+						required="true" />
+					<MultiComboBox items="{leaveRequest>/Approvers}">
+						<core:Item
+							key="{leaveRequest>key}"
+							text="{leaveRequest>text}" />
+					</MultiComboBox>
+					<!-- Comment -->
+					<Label text="Comment" />
+					<TextArea
+						value="{
+							path: 'leaveRequest>/Reason',
+							type: 'sap.ui.model.type.String',
+							constraints: {
+								minLength: 5,
+								maxLength: 512
+							}
+						}"
+						placeholder="Enter reason for leave request"
+						growing="true"
+						rows="4" />
+					<!-- Attachments -->
+					<Label text="Attachments" />
+					<file:FileUploader
+						label="Related Document"
+						fileType="jpg, jpeg" />
+				</form:SimpleForm>
+			</VBox>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<Button
+					icon="sap-icon://alert"
+					text="{=${message>/}.length}"
+					visible="{=${message>/}.length > 0}"
+					type="Emphasized"
+					press="onMessagePopoverPress" />
+				<ToolbarSpacer />
+				<Button
+					text="Submit"
+					icon="sap-icon://accept"
+					type="Accept"
+					press="onLeaveRequestSubmit" />
+				<Button
+					text="Cancel"
+					icon="sap-icon://decline"
+					type="Reject"
+					press="onLeaveRequestCancel" />
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

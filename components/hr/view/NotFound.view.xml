@@ -1,0 +1,12 @@
+<mvc:View
+	controllerName=""
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<IllustratedMessage
+		illustrationType="sapIllus-PageNotFound"
+		title="{i18n>NotFound}"
+		description="{i18n>NotFound.text} {i18n>NotFound.description}" />
+</mvc:View>

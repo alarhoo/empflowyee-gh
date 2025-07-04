@@ -1,0 +1,114 @@
+{
+  "selectedKey": "",
+
+  "navigation": [
+    {
+      "titleI18nKey": "sideContentHome",
+      "icon": "sap-icon://home",
+      "expanded": true,
+      "key": "zemployeeRoute",
+      "items": []
+    },
+    {
+      "titleI18nKey": "sideContentEmployees",
+      "icon": "sap-icon://employee",
+      "expanded": true,
+      "key": "emp",
+      "items": [
+        {
+          "titleI18nKey": "sideContentEmployeesView",
+          "key": "employeeMasterRoute"
+        },
+        {
+          "titleI18nKey": "sideContentEmployeesRegister",
+          "key": "employeeRegisterRoute"
+        },
+        {
+          "titleI18nKey": "sideContentEmployeesEdit",
+          "key": "employeeEditViewRoute"
+        }
+      ]
+    },
+    {
+      "titleI18nKey": "sideContentProject",
+      "icon": "sap-icon://capital-projects",
+      "expanded": true,
+      "key": "project",
+      "items": [
+        {
+          "titleI18nKey": "sideContentProjectView",
+          "key": "projectViewRoute"
+        },
+        {
+          "titleI18nKey": "sideContentProjectAdd",
+          "key": "projectAddRoute"
+        },
+        {
+          "titleI18nKey": "sideContentProjectEdit",
+          "key": "projectEditViewRoute"
+        }
+      ]
+    },
+    {
+      "titleI18nKey": "sideContentLeaves",
+      "icon": "sap-icon://accidental-leave",
+      "expanded": true,
+      "key": "leave",
+      "items": [
+        {
+          "titleI18nKey": "sideContentLeavesView",
+          "key": "leaveViewRoute"
+        },
+        {
+          "titleI18nKey": "sideContentLeavesRegister",
+          "key": "leaveAddRoute"
+        },
+        {
+          "titleI18nKey": "sideContentLeavesEdit",
+          "key": "leaveEditViewRoute"
+        }
+      ]
+    },
+    {
+      "titleI18nKey": "sideContentHolidays",
+      "icon": "sap-icon://flight",
+      "expanded": true,
+      "key": "holiday",
+      "items": [
+        {
+          "titleI18nKey": "sideContentHolidayView",
+          "key": "holidayViewRoute"
+        },
+        {
+          "titleI18nKey": "sideContentHolidayRegister",
+          "key": "holidayAddRoute"
+        },
+        {
+          "titleI18nKey": "sideContentHolidayEdit",
+          "key": "holidayEditViewRoute"
+        }
+      ]
+    },
+    {
+      "titleI18nKey": "sideContentAssets",
+      "icon": "sap-icon://laptop",
+      "expanded": true,
+      "key": "asset",
+      "items": [
+        {
+          "titleI18nKey": "sideContentAssetView",
+          "key": "assetViewRoute"
+        },
+        {
+          "titleI18nKey": "sideContentAssetRegister",
+          "key": "assetAddRoute"
+        },
+        {
+          "titleI18nKey": "sideContentAssetEdit",
+          "key": "assetEditViewRoute"
+        }
+      ]
+    }
+  ],
+  "fixedNavigation": []
+}

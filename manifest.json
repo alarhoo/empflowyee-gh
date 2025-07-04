@@ -1,0 +1,166 @@
+{
+  "_version": "1.12.0",
+
+  "sap.app": {
+    "id": "com.alarhoo.empflowyee",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "sourceTemplate": {
+      "id": "generator-ui5-app",
+      "version": "1.1.0"
+    }
+  },
+
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {},
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+    "flexEnabled": false,
+    "rootView": {
+      "viewName": "com.alarhoo.empflowyee.view.App",
+      "type": "XML"
+    },
+
+    "dependencies": {
+      "minUI5Version": "1.136.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.f": {}
+      }
+    },
+
+    "handleValidation": true,
+
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.alarhoo.empflowyee.i18n.i18n",
+          "supportedLocales": ["en"],
+          "fallbackLocale": "en",
+          "async": true
+        }
+      },
+      "launchpad": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data/Launchpad.json"
+      }
+    },
+
+    "componentUsages": {
+      "employeeComponent": {
+        "name": "com.alarhoo.empflowyee.components.employee",
+        "lazy": true
+      },
+      "hrComponent": {
+        "name": "com.alarhoo.empflowyee.components.hr",
+        "lazy": true
+      },
+      "adminComponent": {
+        "name": "com.alarhoo.empflowyee.components.admin",
+        "lazy": true
+      }
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.alarhoo.empflowyee.view",
+        "controlId": "appRootControlID",
+        "controlAggregation": "pages",
+        "bypassed": {
+          "target": "notFoundTarget"
+        },
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "launchpad",
+          "target": "launchpad"
+        },
+        {
+          "pattern": "employee",
+          "name": "employeeRoute",
+          "target": {
+            "prefix": "emp",
+            "name": "employeeTarget"
+          }
+        },
+        {
+          "pattern": "human-resources",
+          "name": "hrRoute",
+          "target": {
+            "prefix": "hr",
+            "name": "hrTarget"
+          }
+        },
+        {
+          "pattern": "admin",
+          "name": "adminRoute",
+          "target": {
+            "prefix": "adm",
+            "name": "adminTarget"
+          }
+        }
+      ],
+      "targets": {
+        "main": {
+          "id": "main",
+          "name": "Main"
+        },
+        "launchpad": {
+          "id": "launchpad",
+          "name": "Launchpad"
+        },
+        "employeeTarget": {
+          "type": "Component",
+          "usage": "employeeComponent",
+          "id": "employeeComponent"
+        },
+        "hrTarget": {
+          "type": "Component",
+          "usage": "hrComponent",
+          "id": "hrComponent"
+        },
+        "adminTarget": {
+          "type": "Component",
+          "usage": "adminComponent",
+          "id": "adminComponent"
+        },
+        "notFoundTarget": {
+          "id": "notFound",
+          "name": "NotFound"
+        }
+      }
+    }
+  }
+}

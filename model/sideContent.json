@@ -1,0 +1,100 @@
+{
+  "selectedKey": "",
+
+  "navigation": [
+    {
+      "titleI18nKey": "sideContentHome",
+      "icon": "sap-icon://home",
+      "expanded": true,
+      "key": "",
+      "items": []
+    },
+    {
+      "titleI18nKey": "sideContentEmployees",
+      "icon": "sap-icon://employee",
+      "expanded": true,
+      "key": "emp",
+      "items": [
+        {
+          "titleI18nKey": "sideContentEmployeesView",
+          "key": "EmployeeMaster"
+        },
+        {
+          "titleI18nKey": "sideContentEmployeesRegister",
+          "key": "EmployeeRegister"
+        }
+      ]
+    },
+    {
+      "titleI18nKey": "sideContentLeaves",
+      "icon": "sap-icon://accidental-leave",
+      "expanded": true,
+      "key": "leave",
+      "items": [
+        {
+          "titleI18nKey": "sideContentLeavesView",
+          "key": "LeaveMaster"
+        },
+        {
+          "titleI18nKey": "sideContentLeavesRegister",
+          "key": "LeaveRegister"
+        }
+      ]
+    },
+    {
+      "titleI18nKey": "sideContentHolidays",
+      "icon": "sap-icon://flight",
+      "expanded": true,
+      "key": "holiday",
+      "items": [
+        {
+          "titleI18nKey": "sideContentHolidayView",
+          "key": "HolidayMaster"
+        },
+        {
+          "titleI18nKey": "sideContentHolidayRegister",
+          "key": "HolidayRegister"
+        }
+      ]
+    }
+  ],
+  "fixedNavigation": [
+    {
+      "titleI18nKey": "sideContentImportantLinks",
+      "icon": "sap-icon://chain-link",
+      "key": "importantLinks"
+    },
+    {
+      "titleI18nKey": "sideContentLegal",
+      "icon": "sap-icon://compare",
+      "key": "legal"
+    }
+  ],
+  "masterSettings": [
+    {
+      "titleI18nKey": "sideContentSystemSettings",
+      "key": "systemSettings",
+      "selected": true
+    },
+    {
+      "titleI18nKey": "sideContentOrderSettings",
+      "key": "orderSettings",
+      "selected": false
+    },
+    {
+      "titleI18nKey": "sideContentSupplierSettings",
+      "key": "supplierSettings",
+      "selected": false
+    },
+    {
+      "titleI18nKey": "sideContentCampaignSettings",
+      "key": "campaignSettings",
+      "selected": false
+    },
+    {
+      "titleI18nKey": "sideContentShippingSettings",
+      "key": "shippingSettings",
+      "selected": false
+    }
+  ]
+}

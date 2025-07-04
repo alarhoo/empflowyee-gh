@@ -1,0 +1,187 @@
+<mvc:View
+	controllerName=""
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<!-- <VBox class="sapUiSmallMargin">
+		<ObjectHeader
+			title="Timesheet Entry"
+			number="06/23/2025 to 06/29/2025"
+			numberUnit="Week Period"
+			intro="Time Sheet ID: NRGITS00369972" />
+		<Panel
+			headerText="Time Worked"
+			expandable="false">
+			<Table
+				id="timeSheetTable"
+				inset="false">
+				<columns>
+					<Column>
+						<Text text="Billable" />
+					</Column>
+					<Column>
+						<Text text="6/23\nMon" />
+					</Column>
+					<Column>
+						<Text text="6/24\nTue" />
+					</Column>
+					<Column>
+						<Text text="6/25\nWed" />
+					</Column>
+					<Column>
+						<Text text="6/26\nThu" />
+					</Column>
+					<Column>
+						<Text text="6/27\nFri" />
+					</Column>
+					<Column>
+						<Text text="6/28\nSat" />
+					</Column>
+					<Column>
+						<Text text="6/29\nSun" />
+					</Column>
+					<Column>
+						<Text text="Total" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{project}" />
+							<Input
+								value="{day1}"
+								type="Number"
+								width="4rem" />
+							<Input
+								value="{day2}"
+								type="Number"
+								width="4rem" />
+							<Input
+								value="{day3}"
+								type="Number"
+								width="4rem" />
+							<Input
+								value="{day4}"
+								type="Number"
+								width="4rem" />
+							<Input
+								value="{day5}"
+								type="Number"
+								width="4rem" />
+							<Input
+								value="{day6}"
+								type="Number"
+								width="4rem" />
+							<Input
+								value="{day7}"
+								type="Number"
+								width="4rem" />
+							<Text text="{total}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</Panel>
+		<Button
+			text="Submit"
+			type="Emphasized"
+			press="onSubmit" />
+	</VBox> -->
+	<VBox class="sapUiSmallMargin">
+		<Title
+			text="Time Sheets"
+			level="H2" />
+		<HBox class="sapUiSmallMarginBottom">
+			<Label
+				text="Period"
+				labelFor="dpFrom"
+				class="sapUiSmallMarginEnd" />
+			<DatePicker id="dpFrom" />
+			<Label
+				text="to"
+				class="sapUiSmallMarginBegin sapUiSmallMarginEnd" />
+			<DatePicker id="dpTo" />
+			<Button
+				text="Apply Filters"
+				type="Emphasized"
+				class="sapUiSmallMarginBegin"
+				press="onFilter" />
+		</HBox>
+		<Table
+			id="timeSheetTable"
+			items="{timesheet>/TimeSheets}"
+			growing="true"
+			growingThreshold="9"
+			inset="false">
+			<columns>
+				<Column>
+					<Text text="Status" />
+				</Column>
+				<Column>
+					<Text text="ID" />
+				</Column>
+				<Column>
+					<Text text="Revision" />
+				</Column>
+				<Column>
+					<Text text="Main Doc" />
+				</Column>
+				<Column>
+					<Text text="Supervisor" />
+				</Column>
+				<Column>
+					<Text text="Start Date" />
+				</Column>
+				<Column>
+					<Text text="End" />
+				</Column>
+				<Column>
+					<Text text="ST" />
+				</Column>
+				<Column>
+					<Text text="OT" />
+				</Column>
+				<Column>
+					<Text text="DT" />
+				</Column>
+				<Column>
+					<Text text="Others" />
+				</Column>
+				<Column>
+					<Text text="NB" />
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<ObjectStatus
+						text="{timesheet>status}"
+						state="{= ${timesheet>status} === 'Approved' ? 'Success' : 'Warning'}" />
+					<Link
+						text="{timesheet>id}"
+						press="onIdPress" />
+					<Text text="{timesheet>revision}" />
+					<Text text="{timesheet>mainDoc}" />
+					<Text text="{timesheet>supervisor}" />
+					<Text text="{timesheet>startDate}" />
+					<Text text="{timesheet>endDate}" />
+					<Text text="{timesheet>st}" />
+					<Text text="{timesheet>ot}" />
+					<Text text="{timesheet>dt}" />
+					<Text text="{timesheet>others}" />
+					<Text text="{timesheet>nb}" />
+				</ColumnListItem>
+			</items>
+		</Table>
+		<HBox class="sapUiTinyMarginTop">
+			<Link
+				text="Clear Sort"
+				press="onClearSort" />
+			<Link
+				text="Clear Filters"
+				press="onClearFilters"
+				class="sapUiSmallMarginBegin" />
+		</HBox>
+	</VBox>
+</mvc:View>

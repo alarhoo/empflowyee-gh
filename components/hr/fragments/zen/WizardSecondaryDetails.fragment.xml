@@ -1,0 +1,162 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:controls="com.alarhoo.empflowyee.controls">
+	<MessageStrip
+		text="Attachment documents should be in PDF format and not exceed 2MB."
+		showIcon="true"
+		showCloseButton="true" />
+	<form:SimpleForm
+		editable="true"
+		layout="ColumnLayout">
+		<form:content>
+			<!-- Local Address -->
+			<core:Title text="Local Address" />
+			<Label
+				text="Address"
+				required="true" />
+			<TextArea
+				rows="3"
+				placeholder="13927, Saticoy Street in Van Nuys"
+				valueLiveUpdate="true"
+				value="{
+					path: 'register>/EmpInfoAddrLoc',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 1,
+						maxLength: 120
+					}
+				}"
+				liveChange="onSecondaryDetailsLiveChange" />
+			<Label
+				text="Region"
+				required="true" />
+			<Input
+				placeholder="Scranton"
+				valueLiveUpdate="true"
+				value="{
+					path: 'register>/EmpInfoRegionLoc',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 1
+					}
+				}"
+				liveChange="onSecondaryDetailsLiveChange" />
+			<Label
+				text="State"
+				required="true" />
+			<Input
+				placeholder="Pennsylvania"
+				valueLiveUpdate="true"
+				value="{
+					path: 'register>/EmpInfoStateLoc',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 1
+					}
+				}"
+				liveChange="onSecondaryDetailsLiveChange" />
+			<Label
+				text="Country"
+				required="true" />
+			<Input
+				placeholder="USA"
+				valueLiveUpdate="true"
+				value="{
+					path: 'register>/EmpInfoCountryLoc',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 1
+					}
+				}"
+				liveChange="onSecondaryDetailsLiveChange" />
+			<Label
+				text="Postal Code"
+				required="true" />
+			<Input
+				placeholder="91405"
+				valueLiveUpdate="true"
+				value="{
+					path: 'register>/EmpInfoPostLoc',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 1
+					}
+				}"
+				liveChange="onSecondaryDetailsLiveChange" />
+			<Label
+				text="Supporting Documents"
+				required="true" />
+			<controls:FileUploader
+				label="Address Document"
+				change="onFileUploadChange" />
+			<!-- Permanent Address -->
+			<core:Title text="Permanent Address" />
+			<Label text="Same as Local Address" />
+			<CheckBox
+				selected="{register>/EmpInfoAddrSame}"
+				select="onSameAsLocalAddressCheckBoxSelect" />
+			<Label text="Address" />
+			<TextArea
+				rows="3"
+				placeholder="13927, Saticoy Street in Van Nuys"
+				editable="{= !${register>/EmpInfoAddrSame} }"
+				value="{
+					path: 'register>/EmpInfoAddrPerm',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 1
+					}
+				}" />
+			<Label text="Region" />
+			<Input
+				placeholder="Scranton"
+				editable="{= !${register>/EmpInfoAddrSame} }"
+				value="{
+					path: 'register>/EmpInfoRegionPerm',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 1
+					}
+				}" />
+			<Label text="State" />
+			<Input
+				placeholder="Pennsylvania"
+				editable="{= !${register>/EmpInfoAddrSame} }"
+				value="{
+					path: 'register>/EmpInfoStatePerm',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 1
+					}
+				}" />
+			<Label text="Country" />
+			<Input
+				placeholder="USA"
+				editable="{= !${register>/EmpInfoAddrSame} }"
+				value="{
+					path: 'register>/EmpInfoCountryPerm',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 1
+					}
+				}" />
+			<Label text="Postal Code" />
+			<Input
+				placeholder="91405"
+				editable="{= !${register>/EmpInfoAddrSame} }"
+				value="{
+					path: 'register>/EmpInfoPostPerm',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 1
+					}
+				}" />
+			<Label text="Supporting Documents" />
+			<controls:FileUploader
+				label="Permanent Address Document"
+				change="onFileUploadChange" />
+		</form:content>
+	</form:SimpleForm>
+</core:FragmentDefinition>

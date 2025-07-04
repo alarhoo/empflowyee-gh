@@ -1,0 +1,19 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	xmlns:form="sap.ui.layout.form">
+	<form:SimpleForm
+		editable="true"
+		layout="ColumnLayout">
+		<form:content>
+			<Label text="Exit Interview" />
+			<Text text="{empDetail>/EmpMainFirst}" />
+			<Label text="Status" />
+			<Text text="{empDetail>/EmpMainFirst}" />
+			<Label text="Feedback" />
+			<Text text="{empDetail>/EmpMainFirst}" />
+			<Label text="Comments" />
+			<Text text="{empDetail>/EmpMainFirst}" />
+		</form:content>
+	</form:SimpleForm>
+</c:FragmentDefinition>

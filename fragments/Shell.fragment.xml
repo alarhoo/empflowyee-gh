@@ -1,0 +1,34 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.f"
+	xmlns:m="sap.m"
+	displayBlock="true"
+	busyIndicatorDelay="10">
+	<ShellBar
+		title="emflowyee"
+		secondTitle="workforce streamlined"
+		homeIcon="../img/office_logo.png"
+		showNotifications="true"
+		homeIconPressed="onShellBarHomeIconPressed"
+		notificationsPressed="onShellBarNotificationsPressed">
+		<profile>
+			<m:Avatar initials="UI" />
+		</profile>
+		<searchManager>
+			<SearchManager
+				enableSuggestions="true"
+				suggestionItems="{
+					path: 'launchpad>/groups/0/tiles',
+					sorter: {
+						path: 'Name'
+					}
+				}">
+				<suggestionItems>
+					<m:SuggestionItem
+						text="{launchpad>title}"
+						key="{launchpad>route}" />
+				</suggestionItems>
+			</SearchManager>
+		</searchManager>
+	</ShellBar>
+</mvc:View>

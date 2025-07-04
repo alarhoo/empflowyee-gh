@@ -1,0 +1,33 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog
+		title="{= ${isEdit} ? 'Edit Tile' : 'Add Tile' }"
+		draggable="true"
+		resizable="true">
+		<VBox class="sapUiSmallMargin">
+			<Label text="Group" />
+			<Input value="{tile>/group}" />
+			<Label text="Subgroup" />
+			<Input value="{tile>/subgroup}" />
+			<Label text="Title" />
+			<Input value="{tile>/title}" />
+			<Label text="Icon" />
+			<core:Icon src="{tile>/icon}" />
+			<Label text="Info" />
+			<Input value="{tile>/info}" />
+			<Label text="Route" />
+			<Input value="{tile>/route}" />
+		</VBox>
+		<beginButton>
+			<Button
+				text="Save"
+				press="onSaveTile" />
+		</beginButton>
+		<endButton>
+			<Button
+				text="Cancel"
+				press="onCancelTile" />
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,93 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.admin.controller.AddTile"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<Page
+		title="Add Tile"
+		class="sapUiContentPadding"
+		showNavButton="true"
+		navButtonPress="onPageNavButtonPress">
+		<content>
+			<Table
+				id="tilesTable"
+				items="{/allTiles}">
+				<headerToolbar>
+					<OverflowToolbar design="Solid">
+						<Title
+							text="Tiles"
+							level="H2" />
+						<ToolbarSpacer />
+						<Button
+							text="Add Tile"
+							tooltip="Add Tile"
+							icon="sap-icon://add"
+							press="onAddTile" />
+						<Button
+							tooltip="Filter"
+							icon="sap-icon://filter" />
+						<Button
+							tooltip="Group"
+							icon="sap-icon://group-2" />
+						<ToggleButton
+							icon="sap-icon://menu"
+							tooltip="Enable Custom Context Menu" />
+					</OverflowToolbar>
+				</headerToolbar>
+				<columns>
+					<Column mergeDuplicates="true">
+						<Text text="Group" />
+					</Column>
+					<Column mergeDuplicates="true">
+						<Text text="Subgroup" />
+					</Column>
+					<Column>
+						<Text text="Title" />
+					</Column>
+					<Column
+						minScreenWidth="Desktop"
+						demandPopin="true">
+						<Text text="Info" />
+					</Column>
+					<Column
+						minScreenWidth="Desktop"
+						demandPopin="true">
+						<Text text="Route" />
+					</Column>
+					<Column
+						minScreenWidth="Tablet"
+						demandPopin="true">
+						<Text text="Icon" />
+					</Column>
+					<Column>
+						<Text text="Actions" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{group}" />
+							<Text text="{subgroup}" />
+							<Text text="{title}" />
+							<core:Icon src="{icon}" />
+							<Text text="{info}" />
+							<Text text="{route}" />
+							<HBox>
+								<Button
+									icon="sap-icon://edit"
+									press="onEditTile" />
+								<Button
+									icon="sap-icon://delete"
+									type="Reject"
+									press="onDeleteTile" />
+							</HBox>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>

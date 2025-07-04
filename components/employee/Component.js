@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/UIComponent","sap/ui/core/Messaging"],function(e,t){"use strict";return e.extend("com.alarhoo.empflowyee.components.employee.Component",{metadata:{manifest:"json"},init:function(){e.prototype.init.apply(this,arguments);this.setModel(t.getMessageModel(),"message");this.getRouter().initialize()}})});
+//# sourceMappingURL=Component.js.map

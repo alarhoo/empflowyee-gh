@@ -1,0 +1,309 @@
+<mvc:View
+	controllerName=""
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:tnt="sap.tnt"
+	xmlns:core="sap.ui.core"
+	displayBlock="true"
+	height="100%">
+	<ObjectPageLayout useIconTabBar="true">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<expandedHeading>
+					<m:Title
+						text="{emp>/EmpMainFirst} {emp>/EmpMainLast}"
+						wrapping="true" />
+				</expandedHeading>
+				<snappedHeading>
+					<m:HBox>
+						<m:VBox>
+							<m:Avatar
+								src="{emp>/emp_main_photo}"
+								class="sapUiSmallMarginEnd" />
+						</m:VBox>
+						<m:VBox>
+							<m:Title
+								text="{emp>/EmpMainFirst} {emp>/EmpMainLast}"
+								wrapping="true" />
+							<m:HBox>
+								<m:Text
+									text="{emp>/EmpMainDesignation}"
+									class="sapUiTinyMarginEnd" />
+								<!-- <tnt:InfoLabel
+									text="{= ${emp>/EmpMainActive} === '1' ? 'Active' : 'Inactive'}"
+									colorScheme="{= ${emp>/EmpMainActive} === '1' ? 8 : 2}" /> -->
+							</m:HBox>
+						</m:VBox>
+					</m:HBox>
+				</snappedHeading>
+				<expandedContent>
+					<m:HBox>
+						<m:Text
+							text="{emp>/EmpMainDesignation}"
+							class="sapUiTinyMarginEnd" />
+						<!-- <tnt:InfoLabel
+							text="{= ${emp>/EmpMainActive} === '1' ? 'Active' : 'Inactive'}"
+							colorScheme="{= ${emp>/EmpMainActive} === '1' ? 8 : 2}" /> -->
+					</m:HBox>
+				</expandedContent>
+				<navigationActions>
+					<m:Button
+						text="Edit"
+						type="Emphasized"
+						visible="{= ${emp>/EmpMainActive} === '1' ? true : false}" />
+					<m:OverflowToolbarButton
+						type="Transparent"
+						icon="sap-icon://full-screen"
+						press="handleFullScreen"
+						tooltip="Enter Full Screen Mode"
+						visible="{= ${/actionButtonsInfo/midColumn/fullScreen} !== null }" />
+					<m:OverflowToolbarButton
+						type="Transparent"
+						icon="sap-icon://exit-full-screen"
+						press="handleExitFullScreen"
+						tooltip="Exit Full Screen Mode"
+						visible="{= ${/actionButtonsInfo/midColumn/exitFullScreen} !== null }" />
+					<m:OverflowToolbarButton
+						type="Transparent"
+						icon="sap-icon://decline"
+						press="handleClose"
+						tooltip="Close column"
+						visible="{= ${/actionButtonsInfo/midColumn/closeColumn} !== null }" />
+					<m:OverflowToolbarButton
+						icon="sap-icon://action"
+						type="Transparent"
+						text="Share"
+						tooltip="action" />
+				</navigationActions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+		<headerContent>
+			<m:HeaderContainer scrollStep="600">
+				<m:Avatar
+					src="{emp>/emp_main_photo}"
+					class="sapUiSmallMarginTop"
+					displaySize="L" />
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:HBox class="sapUiTinyMarginBottom">
+						<core:Icon
+							src="sap-icon://account"
+							tooltip="Full Name" />
+						<m:Text
+							text="{emp>/EmpMainFirst} {emp>/EmpMainLast}"
+							class="sapUiSmallMarginBegin" />
+					</m:HBox>
+					<m:HBox class="sapUiTinyMarginBottom">
+						<core:Icon
+							src="sap-icon://outgoing-call"
+							tooltip="Phone Number" />
+						<m:Link
+							text="{emp>/emp_main_phone}"
+							press="handleTelPress"
+							class="sapUiSmallMarginBegin" />
+					</m:HBox>
+					<m:HBox class="sapUiTinyMarginBottom">
+						<core:Icon
+							src="sap-icon://email"
+							tooltip="Email Address" />
+						<m:Link
+							text="{emp>/EmpMainEmail}"
+							press="handleEmailPress"
+							class="sapUiSmallMarginBegin" />
+					</m:HBox>
+					<m:HBox>
+						<core:Icon
+							src="sap-icon://appointment"
+							tooltip="Birthday" />
+						<m:Text
+							text=" {emp>/EmpMainDob}"
+							class="sapUiSmallMarginBegin" />
+					</m:HBox>
+				</m:VBox>
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title
+						text="Office"
+						class="sapUiTinyMarginBottom" />
+					<m:HBox class="sapUiTinyMarginBottom">
+						<m:Label
+							text="Reports To:"
+							class="sapUiSmallMarginEnd" />
+						<m:Link text="{emp>/EmpMainLead}" />
+					</m:HBox>
+					<m:HBox class="sapUiTinyMarginBottom">
+						<m:Label
+							text="Joined On:"
+							class="sapUiSmallMarginEnd" />
+						<m:Text text="{emp>/EmpMainDoj}" />
+					</m:HBox>
+					<m:HBox class="sapUiTinyMarginBottom">
+						<m:Label
+							text="Designation:"
+							class="sapUiSmallMarginEnd" />
+						<m:Text text="{emp>/EmpMainDesignation}" />
+					</m:HBox>
+				</m:VBox>
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title
+						text="Local Address"
+						class="sapUiTinyMarginBottom" />
+					<m:HBox class="sapUiTinyMarginBottom">
+						<m:Label
+							text="Address:"
+							class="sapUiTinyMarginEnd" />
+						<m:Text text="{emp>/emp_main_address}" />
+					</m:HBox>
+					<m:HBox class="sapUiTinyMarginBottom">
+						<m:Label
+							text="City:"
+							class="sapUiTinyMarginEnd" />
+						<m:Text text="{emp>/emp_main_city}" />
+					</m:HBox>
+					<m:HBox>
+						<m:Label
+							text="State:"
+							class="sapUiTinyMarginEnd" />
+						<m:Text text="{emp>/emp_main_state}" />
+					</m:HBox>
+				</m:VBox>
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title
+						text="Skills"
+						class="sapUiTinyMarginBottom" />
+					<m:Text text="{= ${emp>/EmpMainSkill} === null ? 'NA' : ${emp>/EmpMainSkill}}" />
+				</m:VBox>
+			</m:HeaderContainer>
+		</headerContent>
+		<sections>
+			<ObjectPageSection
+				titleUppercase="false"
+				title="Basic Details">
+				<subSections>
+					<ObjectPageSubSection title="Contact Details">
+						<blocks>
+							<core:Fragment
+								fragmentName="com.alarhoo.empflowyee.components.employee.fragments.ContactDetails"
+								type="XML" />
+						</blocks>
+					</ObjectPageSubSection>
+					<ObjectPageSubSection title="Local Address">
+						<blocks>
+							<core:Fragment
+								fragmentName="com.alarhoo.empflowyee.components.employee.fragments.LocalAddress"
+								type="XML" />
+						</blocks>
+					</ObjectPageSubSection>
+					<ObjectPageSubSection title="Permanent Address">
+						<blocks>
+							<core:Fragment
+								fragmentName="com.alarhoo.empflowyee.components.employee.fragments.LocalAddress"
+								type="XML" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection
+				titleUppercase="false"
+				title="Verification"
+				importance="Medium">
+				<subSections>
+					<ObjectPageSubSection title="Identification">
+						<blocks>
+							<core:Fragment
+								fragmentName="com.alarhoo.empflowyee.components.employee.fragments.Identification"
+								type="XML" />
+						</blocks>
+					</ObjectPageSubSection>
+					<ObjectPageSubSection title="Passport">
+						<blocks>
+							<core:Fragment
+								fragmentName="com.alarhoo.empflowyee.components.employee.fragments.Passport"
+								type="XML" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection
+				titleUppercase="false"
+				title="Bank Details"
+				importance="Medium">
+				<subSections>
+					<ObjectPageSubSection title="Bank Details">
+						<blocks>
+							<core:Fragment
+								fragmentName="com.alarhoo.empflowyee.components.employee.fragments.BankDetails"
+								type="XML" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection
+				titleUppercase="false"
+				title="Leave Details"
+				importance="Medium">
+				<subSections>
+					<ObjectPageSubSection title="Leave Overview">
+						<blocks>
+							<core:Fragment
+								fragmentName="com.alarhoo.empflowyee.components.employee.fragments.LeaveOverview"
+								type="XML" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection
+				titleUppercase="false"
+				title="Performance"
+				importance="Medium">
+				<subSections>
+					<ObjectPageSubSection title="Performance">
+						<blocks>
+							<core:Fragment
+								fragmentName="com.alarhoo.empflowyee.components.employee.fragments.PerformanceOverview"
+								type="XML" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection
+				titleUppercase="false"
+				title="Training"
+				importance="Medium">
+				<subSections>
+					<ObjectPageSubSection title="Training">
+						<blocks>
+							<core:Fragment
+								fragmentName="com.alarhoo.empflowyee.components.employee.fragments.Training"
+								type="XML" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection
+				titleUppercase="false"
+				title="Exit Interview"
+				importance="Medium">
+				<subSections>
+					<ObjectPageSubSection title="Exit Interview">
+						<blocks>
+							<core:Fragment
+								fragmentName="com.alarhoo.empflowyee.components.employee.fragments.ExitInterview"
+								type="XML" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection title="Goals Plan">
+				<subSections>
+					<ObjectPageSubSection title="Goals Plan">
+						<blocks>
+							<core:Fragment
+								fragmentName="com.alarhoo.empflowyee.components.employee.fragments.GoalsPlan"
+								type="XML" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+</mvc:View>

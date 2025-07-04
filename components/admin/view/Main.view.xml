@@ -1,0 +1,18 @@
+<mvc:View
+	controllerName=""
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<tnt:ToolPage>
+		<tnt:header>
+		</tnt:header>
+		<tnt:sideContent>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<NavContainer id="idAdminComponent" />
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</mvc:View>

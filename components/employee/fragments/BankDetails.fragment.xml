@@ -1,0 +1,73 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	xmlns:form="sap.ui.layout.form">
+	<form:SimpleForm
+		editable="true"
+		layout="ColumnLayout">
+		<form:content>
+			<Label
+				text="Bank Name"
+				required="true" />
+			<Input
+				value="{
+					path: 'empDetail>/emp_bank_name',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 2,
+						maxLength: 64
+					}
+				}"
+				editable="{empDetail>/isEditable}"
+				placeholder="Enter bank name"
+				required="true" />
+			<Label
+				text="Account Number"
+				required="true" />
+			<Input
+				value="{
+					path: 'empDetail>/emp_account_number',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 8,
+						maxLength: 20,
+						search: '^[0-9]{8,20}$'
+					}
+				}"
+				editable="{empDetail>/isEditable}"
+				placeholder="Enter account number"
+				required="true" />
+			<Label
+				text="IFSC Code"
+				required="true" />
+			<Input
+				value="{
+					path: 'empDetail>/emp_ifsc_code',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 11,
+						maxLength: 11,
+						search: '^[A-Z]{4}0[A-Z0-9]{6}$'
+					}
+				}"
+				editable="{empDetail>/isEditable}"
+				placeholder="Enter IFSC code"
+				required="true" />
+			<Label
+				text="Branch Name"
+				required="true" />
+			<Input
+				value="{
+					path: 'empDetail>/emp_branch_name',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 2,
+						maxLength: 64
+					}
+				}"
+				editable="{empDetail>/isEditable}"
+				placeholder="Enter branch name"
+				required="true" />
+		</form:content>
+	</form:SimpleForm>
+</c:FragmentDefinition>

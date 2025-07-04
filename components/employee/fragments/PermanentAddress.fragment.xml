@@ -1,0 +1,71 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	xmlns:form="sap.ui.layout.form">
+	<form:SimpleForm
+		editable="true"
+		layout="ColumnLayout">
+		<form:content>
+			<Label
+				text="Address"
+				required="true" />
+			<Input
+				value="{
+					path: 'empDetail>/EmpInfoAddrPerm',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 5,
+						maxLength: 256
+					}
+				}"
+				editable="{empDetail>/isEditable}"
+				placeholder="Enter address"
+				required="true" />
+			<Label
+				text="Region"
+				required="true" />
+			<Input
+				value="{
+					path: 'empDetail>/EmpInfoRegionPerm',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 2,
+						maxLength: 64
+					}
+				}"
+				editable="{empDetail>/isEditable}"
+				placeholder="Enter region"
+				required="true" />
+			<Label
+				text="State"
+				required="true" />
+			<Input
+				value="{
+					path: 'empDetail>/EmpInfoStatePerm',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 2,
+						maxLength: 64
+					}
+				}"
+				editable="{empDetail>/isEditable}"
+				placeholder="Enter state"
+				required="true" />
+			<Label
+				text="Country"
+				required="true" />
+			<Input
+				value="{
+					path: 'empDetail>/EmpInfoCountryPerm',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 2,
+						maxLength: 64
+					}
+				}"
+				editable="{empDetail>/isEditable}"
+				placeholder="Enter country"
+				required="true" />
+		</form:content>
+	</form:SimpleForm>
+</c:FragmentDefinition>

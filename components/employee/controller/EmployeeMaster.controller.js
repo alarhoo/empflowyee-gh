@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(e){"use strict";return e.extend("com.alarhoo.empflowyee.components.employee.controller.EmployeeMaster",{onEmployeeListItemPress:function(e){const o=e.getSource();const t=o.getBindingContext("employee");if(t){const e=t.getPath().substring(1);this.getOwnerComponent().getRouter().navTo("employeeDetail",{employeeId:e})}else{sap.m.MessageToast.show("No employee selected.")}}})});
+//# sourceMappingURL=EmployeeMaster.controller.js.map

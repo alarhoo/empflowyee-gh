@@ -1,0 +1,2 @@
+sap.ui.define(["./BaseController","sap/m/MessageBox"],function(e,o){"use strict";return e.extend("com.alarhoo.empflowyee.controller.Main",{sayHello:function(){o.show("Hello World!")},onNavToEmployee:function(){this.getOwnerComponent().getRouter().navTo("employeeComponent")},onNavToHR(){this.getOwnerComponent().getRouter().navTo("employeeComponent")},onNavToManager(){this.getOwnerComponent().getRouter().navTo("employeeComponent")}})});
+//# sourceMappingURL=Main.controller.js.map

@@ -1,0 +1,16 @@
+[
+  {
+    "ClId": "CL001",
+    "ClName": "Dunder Mifflin Inc.",
+    "ClDesc": "Premier provider of paper and office supplies.",
+    "ClLogo": "https://upload.wikimedia.org/wikipedia/en/3/3f/Dunder_Mifflin%2C_Inc_Logo.png",
+    "ClComments": "Classic client since 2001."
+  },
+  {
+    "ClId": "CL002",
+    "ClName": "Schrute Farms",
+    "ClDesc": "Organic beet farm and agritourism venture.",
+    "ClLogo": "",
+    "ClComments": "Family-owned since 1857."
+  }
+]

@@ -1,0 +1,201 @@
+{
+  "_version": "1.12.0",
+
+  "sap.app": {
+    "id": "com.alarhoo.empflowyee.components.employee",
+    "type": "component",
+    "title": "{{employeeComponentTitle}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+    "flexEnabled": false,
+    "rootView": {
+      "viewName": "com.alarhoo.empflowyee.components.employee.view.App",
+      "type": "XML",
+      "async": true
+    },
+
+    "dependencies": {
+      "minUI5Version": "1.136.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.f": {}
+      }
+    },
+
+    "handleValidation": true,
+
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.alarhoo.empflowyee.components.employee.i18n.i18n",
+          "fallbackLocale": "en",
+          "async": true
+        }
+      },
+      "launchpad": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "../../model/data/Launchpad.json"
+      },
+      "side": {
+        "type": "sap.ui.model.json.JSONModel"
+      },
+      "emp": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data/EmployeeMain.json"
+      },
+      "leaveHistory": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data/LeaveHistory.json"
+      },
+      "myAsset": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data/MyAssets.json"
+      },
+      "timesheet": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data/Timesheet.json"
+      }
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.alarhoo.empflowyee.components.employee.view",
+        "controlId": "idEmployeeComponentApp",
+        "controlAggregation": "pages",
+        "bypassed": {
+          "target": "notFoundTarget"
+        },
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "employeeMain",
+          "target": "employeeMain"
+        },
+        {
+          "pattern": "applyLeave",
+          "name": "applyLeaveRoute",
+          "target": "applyLeaveTarget"
+        },
+        {
+          "pattern": "leaveHistory",
+          "name": "leaveHistoryRoute",
+          "target": "leaveHistoryTarget"
+        },
+        {
+          "pattern": "my-asset",
+          "name": "myAssetsRoute",
+          "target": "myAssetsTarget"
+        },
+        {
+          "pattern": "myExpense",
+          "name": "myExpenseRoute",
+          "target": "myExpenseTarget"
+        },
+        {
+          "pattern": "myLearning",
+          "name": "myLearningRoute",
+          "target": "myLearningTarget"
+        },
+        {
+          "pattern": "myPaySlip",
+          "name": "myPaySlipRoute",
+          "target": "myPaySlipTarget"
+        },
+        {
+          "pattern": "myData",
+          "name": "myDataRoute",
+          "target": "myDataTarget"
+        },
+        {
+          "pattern": "submitTimesheet",
+          "name": "submitTimesheetRoute",
+          "target": "submitTimesheetTarget"
+        },
+        {
+          "pattern": "view-timesheet",
+          "name": "viewTimesheetRoute",
+          "target": "viewTimesheetTarget"
+        },
+        {
+          "pattern": "org-chart",
+          "name": "orgChartRoute",
+          "target": "orgChartTarget"
+        }
+      ],
+      "targets": {
+        "employeeMain": {
+          "id": "EmployeeMain",
+          "name": "EmployeeMain"
+        },
+        "toolPageTarget": {
+          "name": "ToolPage"
+        },
+        "applyLeaveTarget": {
+          "id": "ApplyLeave",
+          "name": "ApplyLeave"
+        },
+        "leaveHistoryTarget": {
+          "id": "LeaveHistory",
+          "name": "LeaveHistory"
+        },
+        "myAssetsTarget": {
+          "id": "MyAsset",
+          "name": "MyAsset"
+        },
+        "myExpenseTarget": {
+          "id": "MyExpense",
+          "name": "MyExpense"
+        },
+        "myLearningTarget": {
+          "id": "MyLearning",
+          "name": "MyLearning"
+        },
+        "myPaySlipTarget": {
+          "id": "MyPaySlip",
+          "name": "MyPaySlip"
+        },
+        "orgChartTarget": {
+          "id": "OrgChart",
+          "name": "OrgChart"
+        },
+        "viewTimesheetTarget": {
+          "id": "MyTimesheet",
+          "name": "MyTimesheet"
+        },
+        "submitTimesheetTarget": {
+          "id": "OrgChart",
+          "name": "OrgChart"
+        },
+        "notFoundTarget": {
+          "id": "notFound",
+          "name": "NotFound"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.hr.controller.zen.EmployeeMaster"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	displayBlock="true"
+	height="100%">
+	<Page
+		title="Employee View"
+		showNavButton="true"
+		showHeader="false"
+		navButtonPress="onNavBack">
+		<List
+			id="idEmployeeList"
+			backgroundDesign="Transparent"
+			headerText="Employees ({emp>/length})"
+			items="{
+				path: 'emp>/'
+			}"
+			growing="true"
+			growingThreshold="150"
+			sticky="HeaderToolbar">
+			<headerToolbar>
+				<OverflowToolbar>
+					<Title
+						text="Employees ({emp>/length})"
+						level="H2" />
+					<ToolbarSpacer />
+					<SearchField
+						width="30%"
+						search="onEmployeeSearch" />
+					<Button
+						tooltip="Sort"
+						icon="sap-icon://sort"
+						press="onEmployeeSortPress" />
+					<Button
+						tooltip="Filter"
+						icon="sap-icon://filter"
+						press="onEmployeeFilterPress" />
+					<Button
+						tooltip="Group"
+						icon="sap-icon://group-2"
+						press="onEmployeeGroupPress" />
+					<Button
+						tooltip="Export"
+						icon="sap-icon://excel-attachment"
+						press="onEmployeeExportPress" />
+				</OverflowToolbar>
+			</headerToolbar>
+			<items>
+				<CustomListItem
+					type="DetailAndActive"
+					detailPress=".onEmployeeListItemDetailPress"
+					press="onListItemPress">
+					<HBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+						<Avatar
+							src="{emp>EmpMainImg}"
+							class="sapUiSmallMarginEnd" />
+						<FlexBox
+							alignItems="Start"
+							justifyContent="SpaceBetween"
+							wrap="WrapReverse"
+							width="100%">
+							<VBox>
+								<Title
+									text="{emp>EmpMainFirst} {emp>EmpMainLast}"
+									titleStyle="H4"
+									class="sapUiTinyMarginBottom" />
+								<ObjectAttribute
+									text="{emp>EmpMainDesignation}"
+									class="sapUiTinyMarginBottom" />
+								<Link
+									text="{emp>EmpMainEmail}"
+									href="mailto:{emp>EmpMainEmail}" />
+							</VBox>
+							<VBox class="sapUiSmallMarginEnd">
+								<ObjectIdentifier
+									title="{emp>EmpMainId}"
+									class="sapUiTinyMarginBottom" />
+								<ObjectStatus
+									text="{= ${emp>EmpMainContract} === '1' ? 'Full-time' : 'Contractor'}"
+									state="{= ${emp>EmpMainContract} === '1' ? 'Success' : 'Warning'}"
+									class="sapUiTinyMarginBottom" />
+								<ObjectStatus
+									icon="{= ${emp>EmpMainActive} === '1' ? 'sap-icon://sys-enter' : 'sap-icon://sys-cancel'}"
+									text="{= ${emp>EmpMainActive} === '1' ? 'Active' : 'Inactive'}"
+									state="{= ${emp>EmpMainActive} === '1' ? 'Indication14' : 'Indication12'}"
+									inverted="true"
+									class="sapUiTinyMarginBottom" />
+							</VBox>
+						</FlexBox>
+					</HBox>
+				</CustomListItem>
+			</items>
+		</List>
+	</Page>
+</mvc:View>

@@ -1,0 +1,315 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:controls="com.alarhoo.empflowyee.controls">
+	<form:SimpleForm
+		editable="true"
+		layout="ColumnLayout">
+		<form:content>
+			<!-- Personal Information -->
+			<core:Title text="Personal Information" />
+			<Label
+				text="Full Name (First Middle Last)"
+				required="true" />
+			<Input
+				required="true"
+				placeholder="Michael"
+				value="{
+					path: 'register>/EmpMainFirst',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 2
+					}
+				}"
+				liveChange="onPrimaryDetailsLiveChange" />
+			<Input
+				placeholder="Gary"
+				value="{
+					path: 'register>/EmpMainMiddle',
+					type: 'sap.ui.model.type.String'
+				}" />
+			<Input
+				required="true"
+				placeholder="Scott"
+				value="{
+					path: 'register>/EmpMainLast',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 2
+					}
+				}"
+				liveChange="onPrimaryDetailsLiveChange" />
+			<Label text="Personal Email" />
+			<Input
+				type="Email"
+				placeholder="michael.scott@dundermifflin.com"
+				valueStateText="E-mail must be a valid email address."
+				value="{
+					path: 'register>/EmpMail',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						pattern: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$',
+						minLength: 1
+					}
+				}"
+				required="true"
+				liveChange="onPrimaryDetailsLiveChange" />
+			<Label text="Date of Birth" />
+			<DatePicker
+				placeholder="15-03-1964"
+				value="{
+					path: 'register>/EmpMainDob',
+					type: 'sap.ui.model.type.Date',
+					formatOptions: {
+						source: {
+							pattern: 'dd-MM-yyyy'
+						},
+						pattern: 'dd-MM-yyyy'
+					},
+					constraints: {
+						minimum: '01-01-1970',
+						maximum: '31-12-2100'
+					}
+				}"
+				valueFormat="dd-MM-yyyy"
+				displayFormat="dd-MM-yyyy"
+				class="sapUiSmallMarginBottoms"
+				required="true"
+				change="onPrimaryDetailsLiveChange" />
+			<Label
+				text="Gender"
+				required="true" />
+			<RadioButtonGroup
+				selectedIndex="{= ${parseInt(register>/EmpMainGender)
+				}}"
+				columns="3"
+				valueState="Information"
+				select="onGenderRadioButtonSelect">
+				<RadioButton text="Male" />
+				<RadioButton text="Female" />
+				<RadioButton text="Other" />
+			</RadioButtonGroup>
+			<Label text="Blood Group" />
+			<Input value="{register>/empBloodGroup}" />
+			<Label text="Profile Picture" />
+			<controls:FileUploader
+				label="Profile Picture"
+				fileType="jpg,jpeg,png"
+				change="onFileUploadChange" />
+			<!-- Employment Details Group -->
+			<core:Title text="Employment Details" />
+			<Label text="Employee ID" />
+			<Input
+				type="Number"
+				valueStateText="ID must not be empty. Must be 3 characters."
+				value="{
+					path: 'register>/EmpMainId',
+					type: 'sap.ui.model.type.String',
+					formatOptions: {
+						minIntegerDigits: 1,
+						maxIntegerDigits: 9999
+					},
+					constraints: {
+						maxLength: 3,
+						minLength: 1
+					}
+				}"
+				placeholder="007"
+				required="true"
+				liveChange="onPrimaryDetailsLiveChange" />
+			<Label text="Organizational Email" />
+			<Input
+				type="Email"
+				placeholder="michael.scott@dundermifflin.com"
+				valueStateText="E-mail must be a valid email address."
+				value="{
+					path: 'register>/EmpMainOrgMail',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						pattern: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$',
+						minLength: 1
+					}
+				}"
+				required="true"
+				liveChange="onPrimaryDetailsLiveChange" />
+			<Label
+				text="Date of Joining"
+				required="true" />
+			<DatePicker
+				value="{
+					path: 'register>/EmpMainDoj',
+					type: 'sap.ui.model.type.Date',
+					formatOptions: {
+						source: {
+							pattern: 'dd-MM-yyyy'
+						},
+						pattern: 'dd-MM-yyyy'
+					},
+					constraints: {
+						minimum: '01-01-2016'
+					}
+				}"
+				change="onPrimaryDetailsLiveChange" />
+			<Label
+				text="Employee Billable"
+				required="true" />
+			<Switch
+				state="{= ${parseInt(register>/EmpMainBillable)
+				}}"
+				type="AcceptReject"
+				customTextOn="Yes"
+				customTextOff="No" />
+			<Label
+				text="Employment on Contract"
+				required="true" />
+			<Switch
+				state="{= ${parseInt(register>/EmpMainContract)
+				}}"
+				customTextOn="Yes"
+				customTextOff="No" />
+			<Label
+				text="Profile Type"
+				required="true" />
+			<CheckBox
+				text="Basic"
+				selected="{
+					path: 'register>/EmpMainProfile',
+					formatter: '.isProfileSelected',
+					parameters: {
+						value: 'BASIC'
+					}
+				}"
+				select=".onProfileTypeSelect" />
+			<CheckBox
+				text="Manager"
+				selected="{
+					path: 'register>/EmpMainProfile',
+					formatter: '.isProfileSelected',
+					parameters: {
+						value: 'MANAGER'
+					}
+				}"
+				select=".onProfileTypeSelect" />
+			<CheckBox
+				text="HR"
+				selected="{
+					path: 'register>/EmpMainProfile',
+					formatter: '.isProfileSelected',
+					parameters: {
+						value: 'HR'
+					}
+				}"
+				select=".onProfileTypeSelect" />
+			<CheckBox
+				text="Admin"
+				selected="{
+					path: 'register>/EmpMainProfile',
+					formatter: '.isProfileSelected',
+					parameters: {
+						value: 'ADMIN'
+					}
+				}"
+				select=".onProfileTypeSelect" />
+			<Label text="Designation" />
+			<Input
+				placeholder="Regional Manager"
+				required="true"
+				value="{
+					path: 'register>/EmpMainDesignation',
+					type: 'sap.ui.model.type.String'
+				}" />
+			<Label text="Process Lead" />
+			<Input
+				placeholder="David Wallace"
+				required="true"
+				value="{
+					path: 'register>/EmpMainLead',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 2
+					}
+				}" />
+			<Label
+				text="Employee Workspace"
+				required="true" />
+			<RadioButtonGroup
+				columns="3"
+				valueState="Information"
+				select="onWorkplaceSelect">
+				<RadioButton text="India" />
+				<RadioButton text="USA" />
+				<RadioButton text="Canada" />
+			</RadioButtonGroup>
+			<!-- Contact Information -->
+			<core:Title text="Contact Information" />
+			<Label
+				text="Primary Contact Number"
+				required="true" />
+			<Input
+				type="Tel"
+				placeholder="7338150543"
+				required="true"
+				value="{
+					path: 'register>/EmpInfoPriContact',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 10,
+						pattern: '^\\s[0-9]{10}$'
+					}
+				}"
+				liveChange="onPrimaryDetailsLiveChange" />
+			<Label text="Secondary Contact Number" />
+			<Input
+				type="Tel"
+				placeholder="7338150543"
+				value="{
+					path: 'register>/EmpInfoSecContact',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 10,
+						pattern: '^\\s[0-9]{10}$'
+					}
+				}" />
+			<Label
+				text="Emergency Contact Number"
+				required="true" />
+			<Input
+				type="Tel"
+				placeholder="7338150543"
+				value="{
+					path: 'register>/EmpInfoEmgContact',
+					type: 'sap.ui.model.type.String',
+					constraints: {
+						minLength: 10,
+						pattern: '^\\s[0-9]{10}$'
+					}
+				}"
+				liveChange="onPrimaryDetailsLiveChange" />
+			<Label
+				text="Emergency Contact Name"
+				required="true" />
+			<Input
+				placeholder="Todd F. Packer"
+				value="{register>/EmpInfoEmgName}"
+				liveChange="onPrimaryDetailsLiveChange" />
+			<Label text="Relation to Contact" />
+			<Select
+				selectedKey="{register>/EmpInfoEmgRel}"
+				required="true">
+				<core:Item
+					key="parents"
+					text="Parents" />
+				<core:Item
+					key="spouse"
+					text="Spouse" />
+				<core:Item
+					key="friends"
+					text="Friends" />
+				<core:Item
+					key="others"
+					text="Others" />
+			</Select>
+		</form:content>
+	</form:SimpleForm>
+</core:FragmentDefinition>

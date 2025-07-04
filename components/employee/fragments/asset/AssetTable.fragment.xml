@@ -1,0 +1,68 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Table
+		items="{
+			path: 'myAsset>/',
+			sorter: {
+				path: 'myAsset>purchaseDate'
+			}
+		}"
+		sticky="ColumnHeaders,HeaderToolbar">
+		<headerToolbar>
+			<OverflowToolbar design="Solid">
+				<Title
+					text="Leaves ({myAsset>/length})"
+					level="H2" />
+				<ToolbarSpacer />
+				<Button icon="sap-icon://email" />
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column>
+				<Text text="Asset No." />
+			</Column>
+			<Column
+				demandPopin="true"
+				minScreenWidth="Tablet"
+				popinDisplay="Inline">
+				<Text text="Brand" />
+			</Column>
+			<Column
+				demandPopin="true"
+				minScreenWidth="Tablet"
+				popinDisplay="Inline">
+				<Text text="Vendor" />
+			</Column>
+			<Column
+				demandPopin="true"
+				minScreenWidth="Tablet"
+				popinDisplay="Inline">
+				<Text text="Warranty Expiry" />
+			</Column>
+			<Column>
+				<Text text="Assigned Date" />
+			</Column>
+			<Column
+				demandPopin="true"
+				minScreenWidth="Tablet"
+				popinDisplay="Inline">
+				<Text text="Status" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{myAsset>documentNo}" />
+					<Text text="{myAsset>brand}" />
+					<Text text="{myAsset>vendor}" />
+					<Text text="{myAsset>warrantyExpiry}" />
+					<Text text="{myAsset>purchaseDate}" />
+					<ObjectStatus
+						text="{myAsset>status}"
+						state="{= ${myAsset>status} === 'Approved' ? 'Success' : 'Error'}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>

@@ -1,0 +1,18 @@
+{
+  "EmpMainFirst": "Michael",
+  "EmpMainLast": "Scott",
+  "EmpMainId": "EMP001",
+  "EmpMainDesignation": "Regional Manager",
+  "EmpMainEmail": "michael.scott@dundermifflin.com",
+  "emp_main_phone": "+1-570-555-0123",
+  "EmpMainDob": "1964-03-15",
+  "EmpMainDoj": "2001-04-20",
+  "EmpMainLead": "David Wallace",
+  "emp_main_address": "1725 Slough Avenue, Scranton Business Park",
+  "emp_main_city": "Scranton",
+  "emp_main_state": "Pennsylvania",
+  "emp_main_photo": "https://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png",
+  "EmpMainSkill": "Sales, Leadership, Humor",
+  "EmpMainActive": "1",
+  "EmpMainBillable": "1"
+}

@@ -1,0 +1,24 @@
+<mvc:View
+  controllerName=""
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  displayBlock="true"
+  height="100%"
+  busyIndicatorDelay="0">
+  <ScrollContainer
+    height="100%"
+    width="100%"
+    vertical="true">
+    <PDFViewer
+      class="sapUiSmallMarginEnd"
+      source="{/Source}"
+      title="{/Title1}"
+      height="{/Height}"
+      width="auto"
+      isTrustedSource="true">
+      <layoutData>
+        <FlexItemData growFactor="1" />
+      </layoutData>
+    </PDFViewer>
+  </ScrollContainer>
+</mvc:View>

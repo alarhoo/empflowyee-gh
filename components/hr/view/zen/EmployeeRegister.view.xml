@@ -1,0 +1,91 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.hr.controller.zen.EmployeeRegister"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	height="100%">
+	<NavContainer id="idEmployeeRegisterNavContainer">
+		<pages>
+			<Page
+				id="idEmployeeRegisterPage"
+				title="{ui>/pageTitle}"
+				titleLevel="H2"
+				showNavButton="true"
+				navButtonPress="onNavBack">
+				<Wizard
+					id="idCreateEmployeeWizard"
+					complete="onCreateEmployeeWizardComplete">
+					<WizardStep
+						id="PrimaryStep"
+						title="Primary Details"
+						icon="sap-icon://message-information"
+						validated="false">
+						<core:Fragment
+							fragmentName="com.alarhoo.empflowyee.components.hr.fragments.zen.WizardPrimaryDetails"
+							type="XML" />
+					</WizardStep>
+					<WizardStep
+						id="SecondaryStep"
+						title="Secondary Details"
+						icon="sap-icon://addresses"
+						validated="false">
+						<core:Fragment
+							fragmentName="com.alarhoo.empflowyee.components.hr.fragments.zen.WizardSecondaryDetails"
+							type="XML" />
+					</WizardStep>
+					<WizardStep
+						id="IdentificationStep"
+						title="Identification Details"
+						icon="sap-icon://document"
+						validated="false">
+						<core:Fragment
+							fragmentName="com.alarhoo.empflowyee.components.hr.fragments.zen.WizardIdentificationDetails"
+							type="XML" />
+					</WizardStep>
+				</Wizard>
+				<footer>
+					<OverflowToolbar>
+						<Button
+							icon="sap-icon://alert"
+							text="{=${message>/}.length}"
+							visible="{=${message>/}.length > 0}"
+							type="Emphasized"
+							press="onMessagePopoverPress" />
+						<ToolbarSpacer />
+						<Button
+							text="Cancel"
+							type="Reject" />
+					</OverflowToolbar>
+				</footer>
+			</Page>
+			<Page
+				id="idEmployeeReviewPage"
+				title="Employee Review"
+				showNavButton="true"
+				navButtonPress="onReviewPageNavButtonPress">
+				<core:Fragment
+					fragmentName="com.alarhoo.empflowyee.components.hr.fragments.zen.WizardEmployeeReview"
+					type="XML" />
+				<footer>
+					<OverflowToolbar>
+						<Button
+							icon="sap-icon://alert"
+							text="{=${message>/}.length}"
+							visible="{=${message>/}.length > 0}"
+							type="Emphasized"
+							press="onMessagePopoverPress" />
+						<ToolbarSpacer />
+						<Button
+							text="{ui>/saveButtonText}"
+							type="{ui>/saveButtonType}"
+							icon="sap-icon://create"
+							press="onEmployeeCreateButtonPress" />
+						<Button
+							text="Cancel"
+							type="Reject" />
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</NavContainer>
+</mvc:View>

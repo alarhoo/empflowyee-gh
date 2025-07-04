@@ -1,0 +1,94 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.employee.controller.LeaveHistory"
+	xmlns="sap.m"
+	xmlns:uxap="sap.uxap"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0">
+	<Page
+		title="Leave History"
+		showNavButton="true"
+		navButtonPress="onNavBack"
+		class="gradient-style-1">
+		<content>
+			<uxap:ObjectPageLayout
+				class="leave"
+				useIconTabBar="true"
+				alwaysShowContentHeader="true"
+				headerContentPinnable="false"
+				toggleHeaderOnTitleClick="false"
+				enableLazyLoading="true">
+				<uxap:headerTitle>
+					<uxap:ObjectPageDynamicHeaderTitle visible="false">
+						<uxap:expandedHeading>
+							<Title text="" />
+						</uxap:expandedHeading>
+					</uxap:ObjectPageDynamicHeaderTitle>
+				</uxap:headerTitle>
+				<uxap:headerContent>
+					<FlexBox
+						wrap="Wrap"
+						fitContainer="true">
+						<VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+							<Title
+								text="Available"
+								class="sapUiTinyMarginBottom" />
+							<ObjectStatus
+								text="10"
+								state="Success"
+								class="sapMObjectStatusLarge" />
+						</VBox>
+						<VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+							<Title
+								text="Utilized"
+								class="sapUiTinyMarginBottom" />
+							<ObjectStatus
+								text="12"
+								state="Warning"
+								class="sapMObjectStatusLarge" />
+						</VBox>
+						<VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+							<Title
+								text="Additional"
+								class="sapUiTinyMarginBottom" />
+							<ObjectStatus
+								text="0"
+								state="Error"
+								class="sapMObjectStatusLarge" />
+						</VBox>
+					</FlexBox>
+				</uxap:headerContent>
+				<uxap:sections>
+					<uxap:ObjectPageSection
+						titleUppercase="false"
+						title="This Year">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection showTitle="false">
+								<uxap:blocks>
+									<core:Fragment
+										fragmentName="com.alarhoo.empflowyee.components.employee.fragments.leave.ThisYearLeaves"
+										type="XML" />
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection
+						titleUppercase="false"
+						title="Past Year">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection>
+								<uxap:blocks>
+									<core:Fragment
+										fragmentName="com.alarhoo.empflowyee.components.employee.fragments.leave.PastYearLeaves"
+										type="XML" />
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+				</uxap:sections>
+			</uxap:ObjectPageLayout>
+		</content>
+	</Page>
+</mvc:View>

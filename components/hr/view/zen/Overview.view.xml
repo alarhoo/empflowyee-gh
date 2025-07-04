@@ -1,0 +1,179 @@
+<mvc:View
+	controllerName="com.alarhoo.empflowyee.components.hr.controller.zen.Overview"
+	xmlns="sap.m"
+	xmlns:u="sap.uxap"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:controls="com.alarhoo.empflowyee.controls">
+	<u:ObjectPageLayout
+		busy="{appView>/busy}"
+		busyIndicatorDelay="{appView>/delay}"
+		class="overviewPage"
+		id="overviewPage"
+		toggleHeaderOnTitleClick="false"
+		upperCaseAnchorBar="false"
+		showAnchorBar="{=!${device>/system/phone}}"
+		headerContentPinnable="false">
+		<u:headerTitle>
+			<u:ObjectPageDynamicHeaderTitle visible="false">
+				<u:snappedContent>
+					<Text text="" />
+				</u:snappedContent>
+			</u:ObjectPageDynamicHeaderTitle>
+		</u:headerTitle>
+		<u:headerContent class="newHomePageHeaderContent">
+			<controls:Banner backgroundSrc="/components/hr/img/retria.svg">
+				<VBox>
+					<Title
+						text="Welcome, Toby Flenderson"
+						titleStyle="H2"
+						title="Title" />
+					<Text text="view analytics" />
+				</VBox>
+			</controls:Banner>
+		</u:headerContent>
+		<u:sections>
+			<u:ObjectPageSection showTitle="false">
+				<u:subSections>
+					<u:ObjectPageSubSection id="eventsSection">
+						<u:blocks>
+							<f:GridContainer
+								class="sapUiTinyMargin"
+								snapToRow="true"
+								containerQuery="true"
+								xmlns:f="sap.f">
+								<f:layout>
+									<f:GridContainerSettings
+										rowSize="84px"
+										columnSize="84px"
+										gap="8px" />
+								</f:layout>
+								<f:layoutXS>
+									<f:GridContainerSettings
+										rowSize="70px"
+										columnSize="70px"
+										gap="8px" />
+								</f:layoutXS>
+								<!-- Total Employees -->
+								<GenericTile
+									header="Total Employees"
+									subheader="Company-wide"
+									frameType="OneByHalf"
+									class="tileLayout">
+									<layoutData>
+										<f:GridContainerItemLayoutData
+											columns="2"
+											rows="1" />
+									</layoutData>
+									<TileContent unit="People">
+										<NumericContent
+											value="{dashboardModel>/totalEmployees}"
+											icon="sap-icon://group"
+											withMargin="false" />
+									</TileContent>
+								</GenericTile>
+								<!-- Active Employees -->
+								<GenericTile
+									header="Active Employees"
+									subheader="Currently working"
+									frameType="OneByHalf"
+									class="tileLayout">
+									<layoutData>
+										<f:GridContainerItemLayoutData
+											columns="2"
+											rows="1" />
+									</layoutData>
+									<TileContent unit="People">
+										<NumericContent
+											value="{dashboardModel>/activeEmployees}"
+											icon="sap-icon://employee"
+											withMargin="false" />
+									</TileContent>
+								</GenericTile>
+								<!-- On Leave Today -->
+								<GenericTile
+									header="On Leave"
+									subheader="Today"
+									frameType="OneByHalf"
+									class="tileLayout">
+									<layoutData>
+										<f:GridContainerItemLayoutData
+											columns="2"
+											rows="1" />
+									</layoutData>
+									<TileContent unit="People">
+										<NumericContent
+											value="{dashboardModel>/onLeaveToday}"
+											icon="sap-icon://calendar"
+											withMargin="false" />
+									</TileContent>
+								</GenericTile>
+								<!-- Pending Approvals -->
+								<GenericTile
+									header="Pending Approvals"
+									subheader="Leave/Expense"
+									frameType="OneByHalf"
+									class="tileLayout">
+									<layoutData>
+										<f:GridContainerItemLayoutData
+											columns="2"
+											rows="1" />
+									</layoutData>
+									<TileContent unit="Items">
+										<NumericContent
+											value="{dashboardModel>/pendingApprovals}"
+											icon="sap-icon://pending"
+											withMargin="false" />
+									</TileContent>
+								</GenericTile>
+								<!-- Monthly Hiring -->
+								<GenericTile
+									header="New Hires"
+									subheader="This Month"
+									frameType="OneByHalf"
+									class="tileLayout">
+									<layoutData>
+										<f:GridContainerItemLayoutData
+											columns="2"
+											rows="1" />
+									</layoutData>
+									<TileContent unit="People">
+										<NumericContent
+											value="{dashboardModel>/monthlyHiring}"
+											icon="sap-icon://add-employee"
+											withMargin="false" />
+									</TileContent>
+								</GenericTile>
+								<!-- Attrition Rate -->
+								<GenericTile
+									header="Attrition Rate"
+									subheader="Last 12 Months"
+									frameType="OneByHalf"
+									class="tileLayout">
+									<layoutData>
+										<f:GridContainerItemLayoutData
+											columns="2"
+											rows="1" />
+									</layoutData>
+									<TileContent unit="%">
+										<NumericContent
+											value="{dashboardModel>/attritionRate}"
+											icon="sap-icon://arrow-bottom"
+											withMargin="false" />
+									</TileContent>
+								</GenericTile>
+								<!-- Add other charts or components -->
+								<core:Fragment
+									fragmentName="com.alarhoo.empflowyee.components.hr.fragments.zen.Events"
+									type="XML" />
+								<core:Fragment
+									fragmentName="com.alarhoo.empflowyee.components.hr.fragments.zen.GenderChart"
+									type="XML" />
+							</f:GridContainer>
+						</u:blocks>
+					</u:ObjectPageSubSection>
+				</u:subSections>
+			</u:ObjectPageSection>
+		</u:sections>
+	</u:ObjectPageLayout>
+</mvc:View>

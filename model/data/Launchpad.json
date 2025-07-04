@@ -1,0 +1,306 @@
+{
+  "groups": [
+    {
+      "id": "idEmployeeSelfService",
+      "title": "Employee Self-Service",
+      "icon": "sap-icon://employee",
+      "route": "employeeRoute",
+      "componentTarget": "employeeTarget",
+      "tiles": [
+        {
+          "subgroup": "My Information",
+          "title": "My Profile",
+          "icon": "sap-icon://employee",
+          "info": "View and edit your personal profile",
+          "route": ""
+        },
+        {
+          "subgroup": "My Information",
+          "title": "My Data",
+          "icon": "sap-icon://folder-full",
+          "info": "Access and manage your personal data",
+          "route": "myDataRoute"
+        },
+        {
+          "subgroup": "My Information",
+          "title": "My Assets",
+          "icon": "sap-icon://laptop",
+          "info": "View and manage company assets assigned to you",
+          "route": "myAssetsRoute"
+        },
+        {
+          "subgroup": "My Learning & Growth",
+          "title": "My Learning",
+          "icon": "sap-icon://e-learning",
+          "info": "Manage learning and development courses",
+          "route": "myLearningRoute"
+        },
+        {
+          "subgroup": "Leave & Absence",
+          "title": "Apply Leave",
+          "icon": "sap-icon://time-off",
+          "info": "Submit time off requests",
+          "route": "applyLeaveRoute"
+        },
+        {
+          "subgroup": "Leave & Absence",
+          "title": "Check Leave Balance",
+          "icon": "sap-icon://calendar",
+          "info": "View your remaining leave days",
+          "route": "leaveHistoryRoute"
+        },
+        {
+          "subgroup": "Time & Attendance",
+          "title": "Submit Timesheet",
+          "icon": "sap-icon://add-document",
+          "info": "Log your working hours",
+          "route": "submitTimesheetRoute"
+        },
+        {
+          "subgroup": "Time & Attendance",
+          "title": "View Timesheet",
+          "icon": "sap-icon://inspection",
+          "info": "Review submitted timesheets",
+          "route": "viewTimesheetRoute"
+        },
+        {
+          "subgroup": "My Pay & Benefits",
+          "title": "Download Payslip",
+          "icon": "sap-icon://download",
+          "info": "Access monthly salary slips",
+          "route": "myPaySlipRoute"
+        },
+        {
+          "subgroup": "My Pay & Benefits",
+          "title": "My Expenses",
+          "icon": "sap-icon://expense-report",
+          "info": "Submit and track expense claims",
+          "route": "myExpenseRoute"
+        },
+        {
+          "subgroup": "Organization & Structure",
+          "title": "Org Chart",
+          "icon": "sap-icon://org-chart",
+          "info": "View the organizational structure",
+          "route": "orgChartRoute"
+        }
+      ]
+    },
+    {
+      "id": "managerSelfService",
+      "title": "Manager Self-Service",
+      "icon": "sap-icon://manager",
+      "route": "manager",
+      "tiles": [
+        {
+          "subgroup": "Team Management",
+          "title": "Approve Leaves",
+          "icon": "sap-icon://approvals",
+          "info": "Manage team leave requests",
+          "route": "approveLeaves"
+        },
+        {
+          "subgroup": "Team Management",
+          "title": "View Team Timesheet",
+          "icon": "sap-icon://group",
+          "info": "Monitor team working hours",
+          "route": "teamTimesheet"
+        },
+        {
+          "subgroup": "Team Management",
+          "title": "Assign Projects",
+          "icon": "sap-icon://add-activity",
+          "info": "Allocate work to team members",
+          "route": "assignProjects"
+        },
+        {
+          "subgroup": "Team Performance",
+          "title": "Performance Reviews",
+          "icon": "sap-icon://discussion",
+          "info": "Conduct employee evaluations and feedback",
+          "route": "performanceReview"
+        },
+        {
+          "subgroup": "Team Performance",
+          "title": "Team Goals",
+          "icon": "sap-icon://goal",
+          "info": "Set and track team objectives",
+          "route": "teamGoals"
+        },
+        {
+          "subgroup": "Team Analytics",
+          "title": "Team Attrition",
+          "icon": "sap-icon://horizontal-bar-chart",
+          "info": "Analyze team turnover trends",
+          "route": "teamAttrition"
+        }
+      ]
+    },
+    {
+      "id": "hrServices",
+      "title": "HR & Admin",
+      "icon": "sap-icon://hr-approval",
+      "route": "hrRoute",
+      "componentTarget": "hrTarget",
+      "tiles": [
+        {
+          "subgroup": "Employee Lifecycle",
+          "title": "Employee Master",
+          "icon": "sap-icon://employee",
+          "info": "Manage comprehensive employee records",
+          "route": "employeeMaster"
+        },
+        {
+          "subgroup": "Employee Lifecycle",
+          "title": "Onboard New Hires",
+          "icon": "sap-icon://visits",
+          "info": "Streamline new employee registration process",
+          "route": "onboardEmployee"
+        },
+        {
+          "subgroup": "Employee Lifecycle",
+          "title": "Exit Management",
+          "icon": "sap-icon://log",
+          "info": "Handle employee resignation and separation workflows",
+          "route": "exitManagement"
+        },
+        {
+          "subgroup": "Employee Lifecycle",
+          "title": "Talent Acquisition",
+          "icon": "sap-icon://recruitment",
+          "info": "Manage job requisitions, applicants, and offers",
+          "route": "talentAcquisition"
+        },
+        {
+          "subgroup": "Compensation & Benefits",
+          "title": "Payroll Processing",
+          "icon": "sap-icon://expense-report",
+          "info": "Process monthly payroll and statutory deductions",
+          "route": "payrollRun"
+        },
+        {
+          "subgroup": "Compensation & Benefits",
+          "title": "Benefit Programs",
+          "icon": "sap-icon://insurance-house",
+          "info": "Administer employee insurance, wellness, and perks",
+          "route": "manageBenefits"
+        },
+        {
+          "subgroup": "Compensation & Benefits",
+          "title": "Salary Revisions",
+          "icon": "sap-icon://money-bills",
+          "info": "Manage annual increments and compensation changes",
+          "route": "salaryRevisions"
+        },
+        {
+          "subgroup": "Learning & Development",
+          "title": "Learning Programs",
+          "icon": "sap-icon://learning-and-development",
+          "info": "Manage training courses and employee enrollments",
+          "route": "learningPrograms"
+        },
+        {
+          "subgroup": "Compliance & Reporting",
+          "title": "HR Analytics",
+          "icon": "sap-icon://business-objects-experience",
+          "info": "Access HR dashboards and generate reports",
+          "route": "hrAnalytics"
+        },
+        {
+          "subgroup": "Compliance & Reporting",
+          "title": "Compliance & Audit",
+          "icon": "sap-icon://shield",
+          "info": "Ensure regulatory adherence and audit readiness",
+          "route": "complianceAudit"
+        },
+        {
+          "subgroup": "Admin & Operations",
+          "title": "Zemployee",
+          "icon": "sap-icon://employee",
+          "info": "Manage Employee Records",
+          "route": "zemployeeRoute"
+        },
+        {
+          "subgroup": "Admin & Operations",
+          "title": "Company Assets",
+          "icon": "sap-icon://wrench",
+          "info": "Track and manage company assets",
+          "route": "companyAssets"
+        },
+        {
+          "subgroup": "Admin & Operations",
+          "title": "Policy Management",
+          "icon": "sap-icon://document",
+          "info": "Manage and publish company HR policies",
+          "route": "policyManagement"
+        }
+      ]
+    },
+    {
+      "id": "analyticsReports",
+      "title": "Analytics & Reports",
+      "icon": "sap-icon://business-objects-experience",
+      "route": "analytics",
+      "tiles": [
+        {
+          "subgroup": "Workforce Trends",
+          "title": "Leave Trends",
+          "icon": "sap-icon://line-chart",
+          "info": "Analyze company-wide leave data and patterns",
+          "route": "leaveTrends"
+        },
+        {
+          "subgroup": "Workforce Trends",
+          "title": "Attrition Dashboard",
+          "icon": "sap-icon://horizontal-bar-chart",
+          "info": "Track employee turnover and retention rates",
+          "route": "attritionDashboard"
+        },
+        {
+          "subgroup": "Workforce Trends",
+          "title": "Headcount Analysis",
+          "icon": "sap-icon://pie-chart",
+          "info": "Visualize workforce size and demographic distribution",
+          "route": "headcountAnalysis"
+        },
+        {
+          "subgroup": "Recruitment & Talent",
+          "title": "Hiring Funnel",
+          "icon": "sap-icon://Fiori2/F0018",
+          "info": "Monitor recruitment pipeline and efficiency",
+          "route": "hiringFunnel"
+        },
+        {
+          "subgroup": "Compensation & Performance",
+          "title": "Payroll Summary",
+          "icon": "sap-icon://money-bills",
+          "info": "Overview of payroll expenditures",
+          "route": "payrollSummary"
+        },
+        {
+          "subgroup": "Compensation & Performance",
+          "title": "Performance Insights",
+          "icon": "sap-icon://performance",
+          "info": "Analyze employee performance across the organization",
+          "route": "performanceInsights"
+        }
+      ]
+    },
+    {
+      "id": "admin",
+      "title": "Admin",
+      "icon": "sap-icon://key-user-settings",
+      "route": "adminRoute",
+      "componentTarget": "adminTarget",
+      "tiles": [
+        {
+          "subgroup": "User Management",
+          "title": "Add Tiles",
+          "icon": "sap-icon://add-product",
+          "info": "Add new tiles to the launchpad",
+          "route": "addTileRoute"
+        }
+      ]
+    }
+  ]
+}

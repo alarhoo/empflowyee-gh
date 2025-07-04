@@ -1,0 +1,98 @@
+{
+  "_version": "1.12.0",
+
+  "sap.app": {
+    "id": "com.alarhoo.empflowyee.components.admin",
+    "type": "component",
+    "title": "{{adminComponentTitle}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+    "flexEnabled": false,
+    "rootView": {
+      "viewName": "com.alarhoo.empflowyee.components.admin.view.App",
+      "type": "XML",
+      "async": true
+    },
+
+    "dependencies": {
+      "minUI5Version": "1.136.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.f": {}
+      }
+    },
+
+    "handleValidation": true,
+
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.alarhoo.empflowyee.components.admin.i18n.i18n",
+          "fallbackLocale": "en",
+          "async": true
+        }
+      },
+      "launchpad": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "../../model/data/Launchpad.json"
+      }
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.alarhoo.empflowyee.components.admin.view",
+        "controlId": "idAdminComponentApp",
+        "controlAggregation": "pages",
+        "bypassed": {
+          "target": "notFoundTarget"
+        },
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "addTilesRoute",
+          "target": "addTileTarget"
+        },
+        {
+          "pattern": "addTile",
+          "name": "addTileRoute",
+          "target": "addTileTarget"
+        }
+      ],
+      "targets": {
+        "addTileTarget": {
+          "id": "addTile",
+          "name": "AddTile"
+        },
+        "notFoundTarget": {
+          "id": "notFound",
+          "name": "NotFound"
+        }
+      }
+    }
+  }
+}
