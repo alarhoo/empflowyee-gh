@@ -5,7 +5,6 @@
 	xmlns:tnt="sap.tnt"
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc">
-	<!-- <App id="appRootControlID" /> -->
 	<App>
 		<pages>
 			<tnt:ToolPage>

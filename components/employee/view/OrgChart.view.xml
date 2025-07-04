@@ -15,6 +15,7 @@
 				<controls:D3Chart
 					chartType="org"
 					title=""
+					height="90vh"
 					showLegend="false"
 					data="{/orgData}">
 					<controls:data>

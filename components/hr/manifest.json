@@ -112,112 +112,112 @@
       },
       "routes": [
         {
-          "pattern": "zemployee",
-          "name": "zemployeeRoute",
+          "pattern": "zenployee",
+          "name": "zenployeeRoute",
           "target": "employeeTarget"
         },
         {
-          "pattern": "zemployee/view/employee",
+          "pattern": "zenployee/view/employee",
           "name": "employeeMasterRoute",
           "target": "employeeMasterTarget"
         },
         {
-          "pattern": "zemployee/detail/employee/{employeeId}/{layout}",
+          "pattern": "zenployee/detail/employee/{employeeId}/{layout}",
           "name": "employeeDetailRoute",
           "target": ["employeeMasterTarget", "employeeDetailTarget"]
         },
         {
-          "pattern": "zemployee/register",
+          "pattern": "zenployee/register",
           "name": "employeeRegisterRoute",
           "target": "employeeRegisterTarget"
         },
         {
-          "pattern": "zemployee/edit/employee",
+          "pattern": "zenployee/edit/employee",
           "name": "employeeEditViewRoute",
           "target": "employeeEditViewTarget"
         },
         {
-          "pattern": "zemployee/edit/employee/{employeeId}",
+          "pattern": "zenployee/edit/employee/{employeeId}",
           "name": "employeeEditRoute",
           "target": "employeeEditTarget"
         },
         {
-          "pattern": "zemployee/view/project",
+          "pattern": "zenployee/view/project",
           "name": "projectViewRoute",
           "target": "projectViewTarget"
         },
         {
-          "pattern": "zemployee/add/project",
+          "pattern": "zenployee/add/project",
           "name": "projectAddRoute",
           "target": "projectAddTarget"
         },
         {
-          "pattern": "zemployee/edit/project",
+          "pattern": "zenployee/edit/project",
           "name": "projectEditViewRoute",
           "target": "projectEditViewTarget"
         },
         {
-          "pattern": "zemployee/edit/project/{projectId}",
+          "pattern": "zenployee/edit/project/{projectId}",
           "name": "projectEditRoute",
           "target": "projectEditTarget"
         },
         {
-          "pattern": "zemployee/view/leave",
+          "pattern": "zenployee/view/leave",
           "name": "leaveViewRoute",
           "target": "leaveViewTarget"
         },
         {
-          "pattern": "zemployee/add/leave",
+          "pattern": "zenployee/add/leave",
           "name": "leaveAddRoute",
           "target": "leaveAddTarget"
         },
         {
-          "pattern": "zemployee/edit/leave",
+          "pattern": "zenployee/edit/leave",
           "name": "leaveEditViewRoute",
           "target": "leaveEditViewTarget"
         },
         {
-          "pattern": "zemployee/edit/leave/{leaveId}",
+          "pattern": "zenployee/edit/leave/{leaveId}",
           "name": "leaveEditRoute",
           "target": "leaveEditTarget"
         },
         {
-          "pattern": "zemployee/view/holiday",
+          "pattern": "zenployee/view/holiday",
           "name": "holidayViewRoute",
           "target": "holidayViewTarget"
         },
         {
-          "pattern": "zemployee/add/holiday",
+          "pattern": "zenployee/add/holiday",
           "name": "holidayAddRoute",
           "target": "holidayAddTarget"
         },
         {
-          "pattern": "zemployee/edit/holiday",
+          "pattern": "zenployee/edit/holiday",
           "name": "holidayEditViewRoute",
           "target": "holidayEditViewTarget"
         },
         {
-          "pattern": "zemployee/edit/holiday/{holidayId}",
+          "pattern": "zenployee/edit/holiday/{holidayId}",
           "name": "holidayEditRoute",
           "target": "holidayAddTarget"
         },
         {
-          "pattern": "zemployee/view/asset",
+          "pattern": "zenployee/view/asset",
           "name": "assetViewRoute",
           "target": "assetViewTarget"
         },
         {
-          "pattern": "zemployee/add/asset",
+          "pattern": "zenployee/add/asset",
           "name": "assetAddRoute",
           "target": "assetAddTarget"
         },
         {
-          "pattern": "zemployee/edit/asset",
+          "pattern": "zenployee/edit/asset",
           "name": "assetEditViewRoute",
           "target": "assetEditViewTarget"
         },
         {
-          "pattern": "zemployee/edit/asset/{assetId}",
+          "pattern": "zenployee/edit/asset/{assetId}",
           "name": "assetEditRoute",
           "target": "assetEditTarget"
         }

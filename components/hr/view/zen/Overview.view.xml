@@ -21,7 +21,7 @@
 				</u:snappedContent>
 			</u:ObjectPageDynamicHeaderTitle>
 		</u:headerTitle>
-		<u:headerContent class="newHomePageHeaderContent">
+		<u:headerContent>
 			<controls:Banner backgroundSrc="/components/hr/img/retria.svg">
 				<VBox>
 					<Title
@@ -67,7 +67,7 @@
 									</layoutData>
 									<TileContent unit="People">
 										<NumericContent
-											value="{dashboardModel>/totalEmployees}"
+											value="{/totalEmployees}"
 											icon="sap-icon://group"
 											withMargin="false" />
 									</TileContent>
@@ -85,7 +85,7 @@
 									</layoutData>
 									<TileContent unit="People">
 										<NumericContent
-											value="{dashboardModel>/activeEmployees}"
+											value="{/activeEmployees}"
 											icon="sap-icon://employee"
 											withMargin="false" />
 									</TileContent>
@@ -103,7 +103,7 @@
 									</layoutData>
 									<TileContent unit="People">
 										<NumericContent
-											value="{dashboardModel>/onLeaveToday}"
+											value="{/onLeaveToday}"
 											icon="sap-icon://calendar"
 											withMargin="false" />
 									</TileContent>
@@ -121,7 +121,7 @@
 									</layoutData>
 									<TileContent unit="Items">
 										<NumericContent
-											value="{dashboardModel>/pendingApprovals}"
+											value="{/pendingApprovals}"
 											icon="sap-icon://pending"
 											withMargin="false" />
 									</TileContent>
@@ -139,7 +139,7 @@
 									</layoutData>
 									<TileContent unit="People">
 										<NumericContent
-											value="{dashboardModel>/monthlyHiring}"
+											value="{/monthlyHiring}"
 											icon="sap-icon://add-employee"
 											withMargin="false" />
 									</TileContent>
@@ -157,19 +157,19 @@
 									</layoutData>
 									<TileContent unit="%">
 										<NumericContent
-											value="{dashboardModel>/attritionRate}"
+											value="{/attritionRate}"
 											icon="sap-icon://arrow-bottom"
 											withMargin="false" />
 									</TileContent>
 								</GenericTile>
-								<!-- Add other charts or components -->
-								<core:Fragment
-									fragmentName="com.alarhoo.empflowyee.components.hr.fragments.zen.Events"
-									type="XML" />
-								<core:Fragment
-									fragmentName="com.alarhoo.empflowyee.components.hr.fragments.zen.GenderChart"
-									type="XML" />
 							</f:GridContainer>
+							<!-- Add other charts or components -->
+							<core:Fragment
+								fragmentName="com.alarhoo.empflowyee.components.hr.fragments.zen.Events"
+								type="XML" />
+							<!-- <core:Fragment
+									fragmentName="com.alarhoo.empflowyee.components.hr.fragments.zen.GenderChart"
+									type="XML" /> -->
 						</u:blocks>
 					</u:ObjectPageSubSection>
 				</u:subSections>

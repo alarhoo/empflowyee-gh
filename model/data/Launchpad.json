@@ -2,7 +2,7 @@
   "groups": [
     {
       "id": "idEmployeeSelfService",
-      "title": "Employee Self-Service",
+      "title": "Employee",
       "icon": "sap-icon://employee",
       "route": "employeeRoute",
       "componentTarget": "employeeTarget",
@@ -11,6 +11,7 @@
           "subgroup": "My Information",
           "title": "My Profile",
           "icon": "sap-icon://employee",
+          "count": "",
           "info": "View and edit your personal profile",
           "route": ""
         },
@@ -18,6 +19,7 @@
           "subgroup": "My Information",
           "title": "My Data",
           "icon": "sap-icon://folder-full",
+          "count": "",
           "info": "Access and manage your personal data",
           "route": "myDataRoute"
         },
@@ -25,6 +27,7 @@
           "subgroup": "My Information",
           "title": "My Assets",
           "icon": "sap-icon://laptop",
+          "count": "4",
           "info": "View and manage company assets assigned to you",
           "route": "myAssetsRoute"
         },
@@ -32,6 +35,7 @@
           "subgroup": "My Learning & Growth",
           "title": "My Learning",
           "icon": "sap-icon://e-learning",
+          "count": "12",
           "info": "Manage learning and development courses",
           "route": "myLearningRoute"
         },
@@ -39,6 +43,8 @@
           "subgroup": "Leave & Absence",
           "title": "Apply Leave",
           "icon": "sap-icon://time-off",
+          "count": "1",
+          "footer": "Pending",
           "info": "Submit time off requests",
           "route": "applyLeaveRoute"
         },
@@ -46,6 +52,8 @@
           "subgroup": "Leave & Absence",
           "title": "Check Leave Balance",
           "icon": "sap-icon://calendar",
+          "count": "11",
+          "footer": "Available",
           "info": "View your remaining leave days",
           "route": "leaveHistoryRoute"
         },
@@ -53,6 +61,8 @@
           "subgroup": "Time & Attendance",
           "title": "Submit Timesheet",
           "icon": "sap-icon://add-document",
+          "count": "2",
+          "footer": "Pending",
           "info": "Log your working hours",
           "route": "submitTimesheetRoute"
         },
@@ -88,7 +98,7 @@
     },
     {
       "id": "managerSelfService",
-      "title": "Manager Self-Service",
+      "title": "Manager",
       "icon": "sap-icon://manager",
       "route": "manager",
       "tiles": [
@@ -138,7 +148,7 @@
     },
     {
       "id": "hrServices",
-      "title": "HR & Admin",
+      "title": "Human Resource",
       "icon": "sap-icon://hr-approval",
       "route": "hrRoute",
       "componentTarget": "hrTarget",
@@ -215,10 +225,10 @@
         },
         {
           "subgroup": "Admin & Operations",
-          "title": "Zemployee",
+          "title": "Zenployee",
           "icon": "sap-icon://employee",
           "info": "Manage Employee Records",
-          "route": "zemployeeRoute"
+          "route": "zenployeeRoute"
         },
         {
           "subgroup": "Admin & Operations",

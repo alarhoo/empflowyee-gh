@@ -1,7 +1,8 @@
 sap.ui.define([
 	'com/alarhoo/empflowyee/components/hr/controller/BaseController',
-	'sap/ui/Device'
-], function (Controller, Device) {
+	'sap/ui/Device',
+	'sap/m/MessageToast'
+], function (Controller, Device, MessageToast) {
 	'use strict'
 
 	return Controller.extend('com.alarhoo.empflowyee.components.hr.controller.zen.ToolPage', {
@@ -19,14 +20,18 @@ sap.ui.define([
 				this.onSideNavButtonPress()
 			}
 
-			Device.media.attachHandler(this._handleWindowResize, this)
+			Device.media.attachHandler(this._handleWindowResize)
 		},
 
 		onSideNavButtonPress: function () {
-			const oToolPage = this.byId('idHRToolPage')
-			const bSideExpanded = oToolPage.getSideExpanded()
-			this._setToggleButtonTooltip(bSideExpanded)
-			oToolPage.setSideExpanded(!oToolPage.getSideExpanded())
+			try {
+				const oToolPage = this.byId('idHRToolPage')
+				const bSideExpanded = oToolPage.getSideExpanded()
+				this._setToggleButtonTooltip(bSideExpanded)
+				oToolPage.setSideExpanded(!oToolPage.getSideExpanded())
+			} catch (error) {
+				MessageToast.show(error.message)
+			}
 		},
 
 		_setToggleButtonTooltip: function (bSideExpanded) {

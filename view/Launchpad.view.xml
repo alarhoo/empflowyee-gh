@@ -38,7 +38,7 @@
 					class="sapUiSmallMarginBegin flowUiNoMarginBottom">
 					<f:GridList
 						id="gridList"
-						class="sapUiSmallMarginBegin flowUiMediumPaddingTop flowUiMediumPaddingBottom"
+						class="sapUiSmallMarginBegin flowUiMediumPaddingTop flowUiMediumPaddingBottom flowUiMediumPaddingRight"
 						items="{
 							path: 'launchpad>tiles',
 							sorter: {
@@ -61,15 +61,15 @@
 								width="100%"
 								press=".onTilePress">
 								<tileContent>
-									<TileContent>
+									<TileContent footer="{launchpad>footer}">
 										<content>
-											<NumericContent
-												withMargin="false"
-												icon="{launchpad>icon}"
-												value="{kpivalue}"
-												valueColor="{color}"
-												indicator="{trend}"
-												scale="{scale}" />
+											<HBox>
+												<ImageContent src="{launchpad>icon}" />
+												<NumericContent
+													withMargin="false"
+													visible="{= ${launchpad>count} ? true : false}"
+													value="{launchpad>count}" />
+											</HBox>
 										</content>
 									</TileContent>
 								</tileContent>

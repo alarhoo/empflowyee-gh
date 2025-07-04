@@ -1,0 +1,2 @@
+sap.ui.define(["com/alarhoo/controller/Main.controller"],function(o){"use strict";QUnit.module("Sample App controller test");QUnit.test("The AppController class has a sayHello method",function(t){t.strictEqual(typeof o.prototype.sayHello,"function")})});
+//# sourceMappingURL=App.qunit.js.map

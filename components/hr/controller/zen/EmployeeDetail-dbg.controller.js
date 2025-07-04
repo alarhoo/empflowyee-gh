@@ -46,7 +46,7 @@ sap.ui.define([
 
 	_Controller.prototype.handleClose = function () {
 		const sNextLayout = this._model.getProperty('/actionButtonsInfo/midColumn/closeColumn')
-		this.getRouter().navTo('zemployeeRoute', {
+		this.getRouter().navTo('zenployeeRoute', {
 			layout: sNextLayout,
 		})
 	}

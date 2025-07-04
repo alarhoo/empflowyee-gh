@@ -92,7 +92,13 @@ sap.ui.define([
 				bubbleData: bubbleData,
 				genderData: genderData,
 				microDonutData: microDonutData,
-				orgData: orgData
+				orgData: orgData,
+				totalEmployees: 28,
+				activeEmployees: 7,
+				onLeaveToday: 3,
+				pendingApprovals: 1,
+				monthlyHiring: 12,
+				attritionRate: 5
 			})
 			this.getView().setModel(model)
 		},

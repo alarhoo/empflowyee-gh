@@ -6,13 +6,26 @@
 	padding-bottom: 1rem;
 }
 
+.flowUiMediumPaddingRight {
+	padding-right: 1rem;
+}
+
 .flowUiNoMarginBottom {
 	margin-bottom: 0;
+}
+
+#__container1-__component0---launchpad--idIconTabBar--header-0-scroll,
+#__component0---launchpad--idIconTabBar .sapMScrollContScroll {
+	padding-right: 4rem;
 }
 
 #__component0---launchpad--idIconTabBar-content {
 	padding-top: 0;
 	padding-bottom: 0;
+}
+
+#__component0---launchpad--idIconTabBar .sapMImageContent {
+	width: 2.5rem;
 }
 
 .newHomePageheaderbackground {

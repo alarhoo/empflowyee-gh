@@ -6,7 +6,7 @@
       "titleI18nKey": "sideContentHome",
       "icon": "sap-icon://home",
       "expanded": true,
-      "key": "zemployeeRoute",
+      "key": "zenployeeRoute",
       "items": []
     },
     {

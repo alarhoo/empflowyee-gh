@@ -7,7 +7,7 @@
 	<ShellBar
 		title="emflowyee"
 		secondTitle="workforce streamlined"
-		homeIcon="../img/office_logo.png"
+		homeIcon="https://www.nbcstore.com/cdn/shop/products/theoffice_dundermifflin_logo_navy_stickers_mockup.jpg"
 		showNotifications="true"
 		homeIconPressed="onShellBarHomeIconPressed"
 		notificationsPressed="onShellBarNotificationsPressed">
