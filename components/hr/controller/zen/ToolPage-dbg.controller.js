@@ -15,12 +15,23 @@ sap.ui.define([
 		_adaptMediaScreen: function () {
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass())
 
-			// if the app starts on desktop devices with small or meduim screen size, collaps the sid navigation
-			if (Device.resize.width <= 1024) {
-				this.onSideNavButtonPress()
+			// Collapse side nav on tablet/desktop, expand on phone
+			if (Device.system.phone) {
+				this._setSideNavExpanded(false)
+			} else if (Device.resize.width <= 1024) {
+				this._setSideNavExpanded(false)
+			} else {
+				this._setSideNavExpanded(true)
 			}
 
-			Device.media.attachHandler(this._handleWindowResize)
+			Device.media.attachHandler(this._handleWindowResize, this)
+		},
+
+		_setSideNavExpanded: function (bExpanded) {
+			const oToolPage = this.byId('idHRToolPage')
+			if (oToolPage) {
+				oToolPage.setSideExpanded(bExpanded)
+			}
 		},
 
 		onSideNavButtonPress: function () {
@@ -64,13 +75,14 @@ sap.ui.define([
 		},
 
 		_handleWindowResize: function (oDevice) {
-			// if ((oDevice.name === 'Tablet' && this._bExpanded) || oDevice.name === 'Desktop') {
-			// 	this.onSideNavButtonPress()
-			// 	// set the _bExpanded to false on tablet devices
-			// 	// extending and collapsing of side navigation should be done when resizing from
-			// 	// desktop to tablet screen sizes)
-			// 	this._bExpanded = (oDevice.name === 'Desktop')
-			// }
+			// Always collapse on phone, expand on desktop, collapse on tablet
+			if (oDevice.name === 'Phone') {
+				this._setSideNavExpanded(false)
+			} else if (oDevice.name === 'Tablet') {
+				this._setSideNavExpanded(false)
+			} else if (oDevice.name === 'Desktop') {
+				this._setSideNavExpanded(true)
+			}
 		},
 
 		onPageLinkPress: function () {
