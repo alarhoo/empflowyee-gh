@@ -27,6 +27,7 @@ sap.ui.define([
 			try {
 				const oToolPage = this.byId('idHRToolPage')
 				const bSideExpanded = oToolPage.getSideExpanded()
+				MessageToast.show(String(bSideExpanded))
 				this._setToggleButtonTooltip(bSideExpanded)
 				oToolPage.setSideExpanded(!oToolPage.getSideExpanded())
 			} catch (error) {
