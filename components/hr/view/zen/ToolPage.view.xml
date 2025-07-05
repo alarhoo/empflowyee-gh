@@ -30,6 +30,7 @@
 		</tnt:header>
 		<tnt:sideContent>
 			<tnt:SideNavigation
+				expanded="true"
 				selectedKey="{side>/selectedKey}"
 				itemSelect="onSideNavigationItemSelect">
 				<tnt:NavigationList items="{

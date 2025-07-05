@@ -8,8 +8,8 @@ sap.ui.define([
 	return Controller.extend('com.alarhoo.empflowyee.components.hr.controller.zen.ToolPage', {
 
 		onInit: function () {
-			this._adaptMediaScreen()
-			this.getRouter().attachRouteMatched(this._onRouteChange.bind(this))
+			// this._adaptMediaScreen()
+			// this.getRouter().attachRouteMatched(this._onRouteChange.bind(this))
 		},
 
 		_adaptMediaScreen: function () {
