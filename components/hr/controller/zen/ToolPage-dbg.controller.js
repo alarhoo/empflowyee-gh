@@ -64,13 +64,13 @@ sap.ui.define([
 		},
 
 		_handleWindowResize: function (oDevice) {
-			if ((oDevice.name === 'Tablet' && this._bExpanded) || oDevice.name === 'Desktop') {
-				this.onSideNavButtonPress()
-				// set the _bExpanded to false on tablet devices
-				// extending and collapsing of side navigation should be done when resizing from
-				// desktop to tablet screen sizes)
-				this._bExpanded = (oDevice.name === 'Desktop')
-			}
+			// if ((oDevice.name === 'Tablet' && this._bExpanded) || oDevice.name === 'Desktop') {
+			// 	this.onSideNavButtonPress()
+			// 	// set the _bExpanded to false on tablet devices
+			// 	// extending and collapsing of side navigation should be done when resizing from
+			// 	// desktop to tablet screen sizes)
+			// 	this._bExpanded = (oDevice.name === 'Desktop')
+			// }
 		},
 
 		onPageLinkPress: function () {

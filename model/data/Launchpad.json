@@ -228,7 +228,7 @@
           "title": "Zenployee",
           "icon": "sap-icon://employee",
           "info": "Manage Employee Records",
-          "route": "zenployeeRoute"
+          "route": "employeeMasterRoute"
         },
         {
           "subgroup": "Admin & Operations",
